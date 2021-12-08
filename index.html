@@ -7,9 +7,415 @@
 	<link rel="stylesheet" href="css/style.css">
 	<script async src="js/script.js"></script>
 </head>
-<body>
-	<header></header>
-	<main></main>
-	<footer></footer>
+<body class="index">
+	<header class="header">
+		<div class="header__local local">
+			<select class="local__select" name="lang" id="lang">
+				<option class="local__value" value="">EN</option>
+				<option class="local__value" value="">RU</option>
+			</select>
+			<select class="local__select" name="currency" id="currency">
+				<option class="local__value" value="">USD</option>
+				<option class="local__value" value="">RUB</option>
+			</select>
+		</div>
+		<div class="header__user-ui">
+			<a class="header__user-profile" href=""></a>
+			<a class="header__cart" href=""></a>
+			<span class="">Items</span>
+			<span class="header__sum">$0.00</span>
+			<form method="GET">
+				<button type="button" class="header__search-button"></button>
+				<input type="search">
+			</form>
+		</div>
+		<a class="header__logo logo">
+			<img class="logo__image" src="img/e-comm-logo.svg" alt="Логотип сайта" width="135" height="44">
+		</a>
+		<nav class="header__menu menu">
+			<ul class="menu__list">
+				<li class="menu__item">
+					<a href="#" class="menu__link">HOME</a>
+					<h3>Category</h3>
+					<ul class="menu__submenu submenu">
+						<li class="submenu__item">
+							<a href="" class="submenu__link">Coporate Shoes </a>
+						</li>
+						<li class="submenu__item">
+							<a href="" class="submenu__link">Sneakers</a>
+						</li>
+						<li class="submenu__item">
+							<a href="" class="submenu__link">Sandals</a>
+						</li>
+						<li class="submenu__item">
+							<a href="" class="submenu__link">Sport Shoe</a>
+						</li>
+						<li class="submenu__item">
+							<a href="" class="submenu__link">Trainers</a>
+						</li>
+						<li class="submenu__item">
+							<a href="" class="submenu__link">Coporate Shoes </a>
+						</li>
+						<li class="submenu__item">
+							<a href="" class="submenu__link">Sneakers</a>
+						</li>
+						<li class="submenu__item">
+							<a href="" class="submenu__link">Sandals</a>
+						</li>
+						<li class="submenu__item">
+							<a href="" class="submenu__link">Sport Shoe</a>
+						</li>
+						<li class="submenu__item">
+							<a href="" class="submenu__link">Trainers</a>
+						</li>
+					</ul>
+					<h3>Category</h3>
+					<ul class="menu__submenu submenu">
+						<li class="submenu__item">
+							<a href="" class="submenu__link">HOT DEAL</a>
+						</li>
+						<li class="submenu__item">
+							<a href="" class="submenu__link">Sunglasses</a>
+						</li>
+						<li class="submenu__item">
+							<a href="" class="submenu__link">Belts</a>
+						</li>
+						<li class="submenu__item">
+							<a href="" class="submenu__link">Handbags</a>
+						</li>
+						<li class="submenu__item">
+							<a href="" class="submenu__link">Sneakers</a>
+						</li>
+						<li class="submenu__item">
+							<a href="" class="submenu__link">HOT DEAL</a>
+						</li>
+						<li class="submenu__item">
+							<a href="" class="submenu__link">Sunglasses</a>
+						</li>
+						<li class="submenu__item">
+							<a href="" class="submenu__link">Belts</a>
+						</li>
+						<li class="submenu__item">
+							<a href="" class="submenu__link">Handbags</a>
+						</li>
+						<li class="submenu__item">
+							<a href="" class="submenu__link">Sneakers</a>
+						</li>
+					</ul>
+					<h3>Category</h3>
+					<ul class="menu__submenu submenu">
+						<li class="submenu__item">
+							<a href="" class="submenu__link">Coporate Shoes </a>
+						</li>
+						<li class="submenu__item">
+							<a href="" class="submenu__link">Sneakers</a>
+						</li>
+						<li class="submenu__item">
+							<a href="" class="submenu__link">Sandals</a>
+						</li>
+						<li class="submenu__item">
+							<a href="" class="submenu__link">Sport Shoe</a>
+						</li>
+						<li class="submenu__item">
+							<a href="" class="submenu__link">Trainers</a>
+						</li>
+					</ul>
+				</li>
+				<li class="menu__item">
+					<a href="pages/catalog.html" class="menu__link">BAGS</a>
+				</li>
+				<li class="menu__item">
+					<a href="pages/catalog.html" class="menu__link">SNEAKERS</a>
+				</li>
+				<li class="menu__item">
+					<a href="pages/catalog.html" class="menu__link">BELT</a>
+				</li>
+				<li class="menu__item">
+					<a href="pages/contact.html" class="menu__link">CONTACT</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<section class="intro-offer">
+			<a class="intro-offer__link" href="pages/catalog.html">
+				<p class="intro-offer__text">Super Flash Sale 50% Off</p>
+			</a>
+		</section>
+		<section class="index__banners">
+			<article class="banner">
+				<h4 class="banner__heading">FS - QUILTED MAXI CROSS BAG</h4>
+				<img class="banner__image" src="img/bag-black.jpg" alt="фото черной кожаной сумки" width="418" height="355">
+				<p class="banner__discount"><del class="banner__old-rpice">$534,33</del> 24% Off</p>
+				<span class="banner__price">$299,43</span>
+			</article>
+			<article class="banner">
+				<h4 class="banner__heading">FS - Nike Air Max 270 React...</h4>
+				<img class="banner__image" src="img/nike-air-color.jpg" alt="фото разноцветных кроссовок" width="418" height="355">
+				<p class="banner__discount"><del class="banner__old-rpice">$534,33</del> 24% Off</p>
+				<span class="banner__price">$299,43</span>
+			</article>
+			<article class="banner">
+				<h4 class="banner__heading">FS - Nike Air Max 270 React...</h4>
+				<img class="banner__image" src="img/nike-air-red.jpg" alt="фото красных кроссовок" width="418" height="355">
+				<p class="banner__discount"><del class="banner__old-rpice">$534,33</del> 24% Off</p>
+				<span class="banner__price">$299,43</span>
+			</article>
+		</section>
+		<section class="best">
+			<ul class="best__menu">
+				<li class="best__item">
+					<a href="" class="best__link">All</a>
+				</li>
+				<li class="best__item">
+					<a href="" class="best__link">Bags</a>
+				</li>
+				<li class="best__item">
+					<a href="" class="best__link">Sneakers</a>
+				</li>
+				<li class="best__item">
+					<a href="" class="best__link">Belt</a>
+				</li>
+				<li class="best__item">
+					<a href="" class="best__link">Sunglasses</a>
+				</li>
+			</ul>
+			<div class="best__cards">
+				<article class="card">
+					<h4 class="card__title">Nike Air Max 270 React</h4>
+					<img class="card__image" src="img/nike-air-color-2.jpg" alt="">
+					<div class="card__rating"></div>
+					<p class="card__discount"><del class="card__old-rpice">$534,33</del> 24% Off</p>
+					<span class="banner__price">$299,43</span>
+					<div class="card__ui">
+						<a class="card__link card__link_fav" href="">
+							<img class="card__icon" src="img/fav.svg" alt="">
+						</a>
+						<a class="card__link card__link_add" href="">
+							<img class="card__icon" src="img/add.svg" alt="">
+						</a>
+					</div>
+				</article>
+				<article class="card">
+					<h4 class="card__title">Nike Air Max 270 React</h4>
+					<img class="card__image" src="img/bag-brown.jpg" alt="">
+					<div class="card__rating"></div>
+					<p class="card__discount"><del class="card__old-rpice">$534,33</del> 24% Off</p>
+					<span class="banner__price">$299,43</span>
+					<div class="card__ui">
+						<a class="card__link card__link_fav" href="">
+							<img class="card__icon" src="img/fav.svg" alt="">
+						</a>
+						<a class="card__link card__link_add" href="">
+							<img class="card__icon" src="img/add.svg" alt="">
+						</a>
+					</div>
+				</article>
+				<article class="card">
+					<h4 class="card__title">Nike Air Max 270 React</h4>
+					<img class="card__image" src="img/nike-air-color-3.jpg" alt="">
+					<div class="card__rating"></div>
+					<p class="card__discount"><del class="card__old-rpice">$534,33</del> 24% Off</p>
+					<span class="banner__price">$299,43</span>
+					<div class="card__ui">
+						<a class="card__link card__link_fav" href="">
+							<img class="card__icon" src="img/fav.svg" alt="">
+						</a>
+						<a class="card__link card__link_add" href="">
+							<img class="card__icon" src="img/add.svg" alt="">
+						</a>
+					</div>
+				</article>
+				<article class="card">
+					<h4 class="card__title">Nike Air Max 270 React</h4>
+					<img class="card__image" src="img/nike-air-color-4.jpg" alt="">
+					<div class="card__rating"></div>
+					<p class="card__discount"><del class="card__old-rpice">$534,33</del> 24% Off</p>
+					<span class="banner__price">$299,43</span>
+					<div class="card__ui">
+						<a class="card__link card__link_fav" href="">
+							<img class="card__icon" src="img/fav.svg" alt="">
+						</a>
+						<a class="card__link card__link_add" href="">
+							<img class="card__icon" src="img/add.svg" alt="">
+						</a>
+					</div>
+				</article>
+				<article class="card">
+					<h4 class="card__title">Nike Air Max 270 React</h4>
+					<img class="card__image" src="img/nike-air-color-5.jpg" alt="">
+					<div class="card__rating"></div>
+					<p class="card__discount"><del class="card__old-rpice">$534,33</del> 24% Off</p>
+					<span class="banner__price">$299,43</span>
+					<div class="card__ui">
+						<a class="card__link card__link_fav" href="">
+							<img class="card__icon" src="img/fav.svg" alt="">
+						</a>
+						<a class="card__link card__link_add" href="">
+							<img class="card__icon" src="img/add.svg" alt="">
+						</a>
+					</div>
+				</article>
+				<article class="card">
+					<h4 class="card__title">Nike Air Max 270 React</h4>
+					<img class="card__image" src="img/nike-air-color-6.jpg" alt="">
+					<div class="card__rating"></div>
+					<p class="card__discount"><del class="card__old-rpice">$534,33</del> 24% Off</p>
+					<span class="banner__price">$299,43</span>
+					<div class="card__ui">
+						<a class="card__link card__link_fav" href="">
+							<img class="card__icon" src="img/fav.svg" alt="">
+						</a>
+						<a class="card__link card__link_add" href="">
+							<img class="card__icon" src="img/add.svg" alt="">
+						</a>
+					</div>
+				</article>
+				<article class="card">
+					<h4 class="card__title">Nike Air Max 270 React</h4>
+					<img class="card__image" src="img/nike-air-color-7.jpg" alt="">
+					<div class="card__rating"></div>
+					<p class="card__discount"><del class="card__old-rpice">$534,33</del> 24% Off</p>
+					<span class="banner__price">$299,43</span>
+					<div class="card__ui">
+						<a class="card__link card__link_fav" href="">
+							<img class="card__icon" src="img/fav.svg" alt="">
+						</a>
+						<a class="card__link card__link_add" href="">
+							<img class="card__icon" src="img/add.svg" alt="">
+						</a>
+					</div>
+				</article>
+				<article class="card">
+					<h4 class="card__title">Nike Air Max 270 React</h4>
+					<img class="card__image" src="img/nike-air-color-2.jpg" alt="">
+					<div class="card__rating"></div>
+					<p class="card__discount"><del class="card__old-rpice">$534,33</del> 24% Off</p>
+					<span class="banner__price">$299,43</span>
+					<div class="card__ui">
+						<a class="card__link card__link_fav" href="">
+							<img class="card__icon" src="img/fav.svg" alt="">
+						</a>
+						<a class="card__link card__link_add" href="">
+							<img class="card__icon" src="img/add.svg" alt="">
+						</a>
+					</div>
+				</article>
+			</div>
+			<a class="best__more" href="">Load More</a>
+		</section>
+		<section class="now-banner">
+			<div class="now-banner__info">
+				<h2 class="now-banner__heading">Adidas Men Running Sneakers</h2>
+				<p class="now-banner__text">Performance and design. Taken right to the edge.</p>
+				<a class="now-banner__link" href=""></a>
+			</div>
+			<img class="now-banner__image" src="img/banner-shoe.webp" alt="">
+		</section>
+		<section class="services">
+			<div class="services__cards">
+				<div class="services__card feature">
+					<h3 class="feature__heading">FREE SHIPPING</h3>
+					<p class="feature__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+				</div>
+				<div class="services__card feature">
+					<h3 class="feature__heading">100% REFUND</h3>
+					<p class="feature__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+				</div>
+				<div class="services__card feature">
+					<h3 class="feature__heading">SUPPORT 24/7</h3>
+					<p class="feature__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+				</div>
+			</div>
+		</section>
+		<section class="news">
+			<h2 class="news__heading"></h2>
+			<div class="news__cards">
+				<div class="news__card">
+					<img src="img/nike_logo.svg" alt="" class="news__logo">
+					<p class="news__date">01 Jan, 2015</p>
+					<h3 class="news__heading">Fashion Industry</h3>
+					<p class="news__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+				</div>
+				<div class="news__card">
+					<img src="img/figma-logo.svg" alt="" class="news__logo">
+					<p class="news__date">01 Jan, 2015</p>
+					<h3 class="news__heading">Best Design Tools</h3>
+					<p class="news__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+				</div>
+				<div class="news__card">
+					<img src="img/kronos-logo.svg" alt="" class="news__logo">
+					<p class="news__date">01 Jan, 2015</p>
+					<h3 class="news__heading">HR Community</h3>
+					<p class="news__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+				</div>
+			</div>
+		</section>
+		<section class="features">
+			<div class="feature">
+				<h3>Blue Swade Nike Sneakers</h3>
+				<img src="img/sneaker-blue.jpg" alt="">
+				<span class="feature__rating"></span>
+				<p class="feature__price">$499 <del class="feature__old-price">$599</del></p>
+			</div>
+			<div class="feature">
+				<h3>Blue Swade Nike Sneakers</h3>
+				<img src="img/sneaker-blue.jpg" alt="">
+				<span class="feature__rating"></span>
+				<p class="feature__price">$499 <del class="feature__old-price">$599</del></p>
+			</div>
+			<div class="feature">
+				<h3>Blue Swade Nike Sneakers</h3>
+				<img src="img/sneaker-blue.jpg" alt="">
+				<span class="feature__rating"></span>
+				<p class="feature__price">$499 <del class="feature__old-price">$599</del></p>
+			</div>
+		</section>
+		<section class="index__search">
+			<form method="GET" class="search">
+				<input type="search" name="search" id="search" placeholder="Search query...">
+				<button type="submit">Search</button>
+			</form>
+		</section>
+	</main>
+	<footer class="footer">
+		<div class="footer__company">
+			<div class="about-company">
+				<a class="footer__logo logo">
+					<img class="logo__image" src="img/e-comm-logo.svg" alt="Логотип сайта" width="135" height="44">
+				</a>
+				<p class="about-company__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.Since the 1500s, when an unknown printer.</p>
+			</div>
+			<div class="follow">
+				<h3 class="follow__heading">Follow Us</h3>
+				<p class="follow__text">Since the 1500s, when an unknown printer took a galley of type and scrambled.</p>
+				<a href="" class="follow__link"></a>
+				<a href="" class="follow__link"></a>
+			</div>
+			<div class="contact">
+				<h3 class="contact__heading">Contact Us</h3>
+				<address class="contact__text">E-Comm , 4578 Marmora Road, Glasgow D04 89GR</address>
+			</div>
+		</div>
+		<div class="footer__links"></div>
+		<hr>
+		<div class="footer__info">
+			<p class="footer__copy">© 2018 Ecommerce theme by www.bisenbaev.com</p>
+			<div class="footer__banks bank">
+				<a href="" class="bank__link">
+					<img src="img/western-union.png" alt="" class="bank__logo">
+				</a>
+				<a href="" class="bank__link">
+					<img src="img/mastercard.png" alt="" class="bank__logo">
+				</a>
+				<a href="" class="bank__link">
+					<img src="img/paypal.png" alt="" class="bank__logo">
+				</a>
+				<a href="" class="bank__link">
+					<img src="img/visa.png" alt="" class="bank__logo">
+				</a>
+			</div>
+		</div>
+	</footer>
 </body>
 </html>
