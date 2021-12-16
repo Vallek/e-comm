@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>E-comm - Catalog</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Raleway:wght@400;700&display=swap" rel="stylesheet">  
+	<link rel="stylesheet" href="../css/normalize.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<script async src="../js/script.js"></script>
+</head>
+<body class="catalog">
+	<header class="header">
+		<div class="header__head">
+			<div class="header__locals locals">
+				<select class="locals__select" name="lang" id="lang">
+					<option class="locals__value" value="">EN</option>
+					<option class="locals__value" value="">RU</option>
+				</select>
+				<select class="locals__select" name="currency" id="currency">
+					<option class="locals__value" value="">USD</option>
+					<option class="locals__value" value="">RUB</option>
+				</select>
+			</div>
+			<div class="header__user-ui">
+				<a class="header__user-profile" href="">My profile</a>
+				<a class="header__cart cart" href="">
+					<img class="cart__ico" src="../img/cart.svg" alt="иконка корзины">
+					<span class="cart__number">2</span>
+				</a>
+				<span class="header__items">Items</span>
+				<span class="header__sum">$0.00</span>
+				<form class="header__search-form" method="GET">
+					<input class="header__search-input visually-hidden" type="search" name="search">
+					<button class="header__search-button" type="button"></button>
+				</form>
+			</div>
+		</div>
+		<div class="header__main">
+			<a class="header__logo logo">
+				<img class="logo__image" src="../img/e-comm-logo.svg" alt="Логотип сайта" width="135" height="44">
+			</a>
+			<nav class="header__menu menu">
+				<ul class="menu__list">
+					<li class="menu__item">
+						<a href="../index.html" class="menu__link menu__link_active">HOME</a>
+						<section class="menu__dropdown visually-hidden">
+							<h3>Category</h3>
+							<ul class="menu__submenu submenu">
+								<li class="submenu__item">
+									<a href="" class="submenu__link">Coporate Shoes </a>
+								</li>
+								<li class="submenu__item">
+									<a href="" class="submenu__link">Sneakers</a>
+								</li>
+								<li class="submenu__item">
+									<a href="" class="submenu__link">Sandals</a>
+								</li>
+								<li class="submenu__item">
+									<a href="" class="submenu__link">Sport Shoe</a>
+								</li>
+								<li class="submenu__item">
+									<a href="" class="submenu__link">Trainers</a>
+								</li>
+								<li class="submenu__item">
+									<a href="" class="submenu__link">Coporate Shoes </a>
+								</li>
+								<li class="submenu__item">
+									<a href="" class="submenu__link">Sneakers</a>
+								</li>
+								<li class="submenu__item">
+									<a href="" class="submenu__link">Sandals</a>
+								</li>
+								<li class="submenu__item">
+									<a href="" class="submenu__link">Sport Shoe</a>
+								</li>
+								<li class="submenu__item">
+									<a href="" class="submenu__link">Trainers</a>
+								</li>
+							</ul>
+							<h3>Category</h3>
+							<ul class="menu__submenu submenu">
+								<li class="submenu__item">
+									<a href="" class="submenu__link">HOT DEAL</a>
+								</li>
+								<li class="submenu__item">
+									<a href="" class="submenu__link">Sunglasses</a>
+								</li>
+								<li class="submenu__item">
+									<a href="" class="submenu__link">Belts</a>
+								</li>
+								<li class="submenu__item">
+									<a href="" class="submenu__link">Handbags</a>
+								</li>
+								<li class="submenu__item">
+									<a href="" class="submenu__link">Sneakers</a>
+								</li>
+								<li class="submenu__item">
+									<a href="" class="submenu__link">HOT DEAL</a>
+								</li>
+								<li class="submenu__item">
+									<a href="" class="submenu__link">Sunglasses</a>
+								</li>
+								<li class="submenu__item">
+									<a href="" class="submenu__link">Belts</a>
+								</li>
+								<li class="submenu__item">
+									<a href="" class="submenu__link">Handbags</a>
+								</li>
+								<li class="submenu__item">
+									<a href="" class="submenu__link">Sneakers</a>
+								</li>
+							</ul>
+							<h3>Category</h3>
+							<ul class="menu__submenu submenu">
+								<li class="submenu__item">
+									<a href="" class="submenu__link">Coporate Shoes </a>
+								</li>
+								<li class="submenu__item">
+									<a href="" class="submenu__link">Sneakers</a>
+								</li>
+								<li class="submenu__item">
+									<a href="" class="submenu__link">Sandals</a>
+								</li>
+								<li class="submenu__item">
+									<a href="" class="submenu__link">Sport Shoe</a>
+								</li>
+								<li class="submenu__item">
+									<a href="" class="submenu__link">Trainers</a>
+								</li>
+							</ul>
+						</section>
+					</li>
+					<li class="menu__item">
+						<a href="#" class="menu__link">BAGS</a>
+					</li>
+					<li class="menu__item">
+						<a href="#" class="menu__link">SNEAKERS</a>
+					</li>
+					<li class="menu__item">
+						<a href="#" class="menu__link">BELT</a>
+					</li>
+					<li class="menu__item">
+						<a href="#" class="menu__link">CONTACT</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<main class="catalog__main">
+		<aside class="catalog__sidebar">
+			<form class="catalog__filters filter" method="GET">
+				<fieldset class="filter__box">
+					<legend class="filter__title">Hot Deals</legend>
+					<div class="filter__items">
+						<span class="filter__pair">
+							<input class="filter__radio visually-hidden" type="radio" name="deal" id="Nike-deal">
+							<label class="filter__label" for="Nike-deal">Nike</label>
+							<span class="filter__number">2</span>
+						</span>
+						<span class="filter__pair">
+							<input class="filter__radio visually-hidden" type="radio" name="deal" id="Airmax-deal">
+							<label class="filter__label" for="Airmax-deal">Airmax</label>
+							<span class="filter__number">48</span>
+						</span>
+						<span class="filter__pair">
+							<input class="filter__radio visually-hidden" type="radio" name="deal" id="NB-deal">
+							<label class="filter__label" for="NB-deal">NB</label>
+							<span class="filter__number">14</span>
+						</span>
+						<span class="filter__pair">
+							<input class="filter__radio visually-hidden" type="radio" name="deal" id="Adidas-deal">
+							<label class="filter__label" for="Adidas-deal">Adidas</label>
+							<span class="filter__number">15</span>
+						</span>
+						<span class="filter__pair">
+							<input class="filter__radio visually-hidden" type="radio" name="deal" id="Vans-deal">
+							<label class="filter__label" for="Vans-deal">Vans</label>
+							<span class="filter__number">23</span>
+						</span>
+						<span class="filter__pair">
+							<input class="filter__radio visually-hidden" type="radio" name="deal" id="All-Stars-deal">
+							<label class="filter__label" for="All-Stars-deal">All Stars</label>
+							<span class="filter__number">1</span>
+						</span>
+						<span class="filter__pair">
+							<input class="filter__radio visually-hidden" type="radio" name="deal" id="Reebok-deal">
+							<label class="filter__label" for="Reebok-deal">Reebok</label>
+							<span class="filter__number">95</span>
+						</span>
+					</div>
+				</fieldset>
+				<fieldset class="filter__box price-range">
+					<legend class="filter__title">PRICES</legend>
+					<div class="price-range__ranges">
+						<h4 class="price-range__label">Ranger:</h4>
+						<span class="price-range__price price-range__price_min">13.99</span>
+						<span class="price-range__price price-range__price_max">25.99</span>
+					</div>
+					<div class="price-range__slider">
+						<div class="price-range__line">
+							<div class="price-range__handle price-range__handle_min"></div>
+							<div class="price-range__fill"></div>
+							<div class="price-range__handle price-range__handle_max"></div>
+						</div>
+					</div>
+				</fieldset>
+				<fieldset class="filter__box">
+					<legend class="filter__title">COLOR</legend>
+					<div class="filter__colors">
+						<input class="filter__color-input visually-hidden" type="radio" name="color" id="blue-color">
+						<label class="filter__color filter__color_blue" for="blue-color"></label>
+						<input class="filter__color-input visually-hidden" type="radio" name="color" id="red-color">
+						<label class="filter__color filter__color_red" for="red-color"></label>
+						<input class="filter__color-input visually-hidden" type="radio" name="color" id="black-color">
+						<label class="filter__color filter__color_black" for="black-color"></label>
+						<input class="filter__color-input visually-hidden" type="radio" name="color" id="yellow-color">
+						<label class="filter__color filter__color_yellow" for="yellow-color"></label>
+						<input class="filter__color-input visually-hidden" type="radio" name="color" id="purple-color">
+						<label class="filter__color filter__color_purple" for="purple-color"></label>
+						<input class="filter__color-input visually-hidden" type="radio" name="color" id="grey-color">
+						<label class="filter__color filter__color_grey" for="grey-color"></label>
+					</div>
+				</fieldset>
+				<fieldset class="filter__box">
+					<legend class="filter__title">BRAND</legend>
+					<div class="filter__items">
+						<span class="filter__pair">
+							<input class="filter__radio visually-hidden" type="radio" name="brand" id="Nike-brand">
+							<label class="filter__label" for="Nike-brand">Nike</label>
+							<span class="filter__number">99</span>
+						</span>
+						<span class="filter__pair">
+							<input class="filter__radio visually-hidden" type="radio" name="brand" id="Airmax-brand">
+							<label class="filter__label" for="Airmax-brand">Airmax</label>
+							<span class="filter__number">99</span>
+						</span>
+						<span class="filter__pair">
+							<input class="filter__radio visually-hidden" type="radio" name="brand" id="NB-brand">
+							<label class="filter__label" for="NB-brand">NB</label>
+							<span class="filter__number">99</span>
+						</span>
+						<span class="filter__pair">
+							<input class="filter__radio visually-hidden" type="radio" name="brand" id="Adidas-brand">
+							<label class="filter__label" for="Adidas-brand">Adidas</label>
+							<span class="filter__number">99</span>
+						</span>
+					</div>
+				</fieldset>
+			</form>
+			<a class="filter__more" href="more-filters.html">More</a>
+		</aside>
+		<nav class="catalog__breadcrumbs breadcrumbs">
+			<ol class="breadcrumbs__list">
+				<li class="breadcrumbs__item">
+					<a class="breadcrumbs__link" href="">Home</a>
+				</li>
+				<li class="breadcrumbs__item">
+					<a class="breadcrumbs__link">Hot Deals</a>
+				</li>
+			</ol>	
+		</nav>
+		<section class="now-banner now-banner_catalog">
+			<div class="now-banner__content now-banner__content_catalog">
+				<div class="now-banner__info now-banner__info_catalog">
+					<h2 class="now-banner__heading now-banner__heading_catalog">Adidas Men Running Sneakers</h2>
+					<p class="now-banner__text now-banner__text_catalog">Performance and design. Taken right to the edge.</p>
+					<a class="now-banner__link now-banner__link_catalog" href="">SHOP NOW</a>
+				</div>
+			</div>
+		</section>
+		<aside class="catalog__sort"></aside>
+		<div class="catalog__cards">
+			<article class="card">
+				<img class="card__image" src="../img/nike-air-color-2.png" alt="">
+				<div class="card__info">
+					<h4 class="card__title">Nike Air Max 270 React</h4>
+					<span class="card__rating" aria-label="рейтинг: 4 из 5">
+						<img src="../img/star.svg" alt="заполненная звезда рейтинга">
+						<img src="../img/star.svg" alt="заполненная звезда рейтинга">
+						<img src="../img/star.svg" alt="заполненная звезда рейтинга">
+						<img src="../img/star.svg" alt="заполненная звезда рейтинга">
+						<img src="../img/star-empty.svg" alt="пустая звезда рейтинга">
+					</span>
+					<span class="card__price">$299,43</span>
+					<p class="card__discount"><del class="card__old-price">$534,33</del> 24% Off</p>
+				</div>
+				<div class="card__ui">
+					<a class="card__link card__link_fav" href="">
+						<img class="card__icon" src="../img/fav.svg" alt="добавить в избранное">
+					</a>
+					<a class="card__link card__link_add" href="">
+						<img class="card__icon" src="../img/add.svg" alt="добавить в корзину">
+					</a>
+				</div>
+			</article>
+			<article class="card">
+				<img class="card__image" src="../img/bag-brown.png" alt="">
+				<div class="card__info">
+					<h4 class="card__title">Nike Air Max 270 React</h4>
+					<span class="card__rating" aria-label="рейтинг: 4 из 5">
+						<img src="../img/star.svg" alt="заполненная звезда рейтинга">
+						<img src="../img/star.svg" alt="заполненная звезда рейтинга">
+						<img src="../img/star.svg" alt="заполненная звезда рейтинга">
+						<img src="../img/star.svg" alt="заполненная звезда рейтинга">
+						<img src="../img/star-empty.svg" alt="пустая звезда рейтинга">
+					</span>
+					<span class="card__price">$299,43</span>
+					<p class="card__discount"><del class="card__old-price">$534,33</del> 24% Off</p>
+				</div>
+				<div class="card__ui">
+					<a class="card__link card__link_fav" href="">
+						<img class="card__icon" src="../img/fav.svg" alt="добавить в избранное">
+					</a>
+					<a class="card__link card__link_add" href="">
+						<img class="card__icon" src="../img/add.svg" alt="добавить в корзину">
+					</a>
+				</div>
+			</article>
+			<article class="card">
+				<img class="card__image" src="../img/nike-air-color.png" alt="">
+				<div class="card__info">
+					<h4 class="card__title">Nike Air Max 270 React</h4>
+					<span class="card__rating" aria-label="рейтинг: 4 из 5">
+						<img src="../img/star.svg" alt="заполненная звезда рейтинга">
+						<img src="../img/star.svg" alt="заполненная звезда рейтинга">
+						<img src="../img/star.svg" alt="заполненная звезда рейтинга">
+						<img src="../img/star.svg" alt="заполненная звезда рейтинга">
+						<img src="../img/star-empty.svg" alt="пустая звезда рейтинга">
+					</span>
+					<span class="card__price">$299,43</span>
+					<p class="card__discount"><del class="card__old-price">$534,33</del> 24% Off</p>
+				</div>
+				<div class="card__ui">
+					<a class="card__link card__link_fav" href="">
+						<img class="card__icon" src="../img/fav.svg" alt="добавить в избранное">
+					</a>
+					<a class="card__link card__link_add" href="">
+						<img class="card__icon" src="../img/add.svg" alt="добавить в корзину">
+					</a>
+				</div>
+			</article>
+			<article class="card">
+				<img class="card__image" src="../img/nike-air-color-3.png" alt="">
+				<div class="card__info">
+					<h4 class="card__title">Nike Air Max 270 React</h4>
+					<span class="card__rating" aria-label="рейтинг: 4 из 5">
+						<img src="../img/star.svg" alt="заполненная звезда рейтинга">
+						<img src="../img/star.svg" alt="заполненная звезда рейтинга">
+						<img src="../img/star.svg" alt="заполненная звезда рейтинга">
+						<img src="../img/star.svg" alt="заполненная звезда рейтинга">
+						<img src="../img/star-empty.svg" alt="пустая звезда рейтинга">
+					</span>
+					<span class="card__price">$299,43</span>
+					<p class="card__discount"><del class="card__old-price">$534,33</del> 24% Off</p>
+				</div>
+				<div class="card__ui">
+					<a class="card__link card__link_fav" href="">
+						<img class="card__icon" src="../img/fav.svg" alt="добавить в избранное">
+					</a>
+					<a class="card__link card__link_add" href="">
+						<img class="card__icon" src="../img/add.svg" alt="добавить в корзину">
+					</a>
+				</div>
+			</article>
+			<article class="card">
+				<img class="card__image" src="../img/nike-air-color-4.png" alt="">
+				<div class="card__info">
+					<h4 class="card__title">Nike Air Max 270 React</h4>
+					<span class="card__rating" aria-label="рейтинг: 4 из 5">
+						<img src="../img/star.svg" alt="заполненная звезда рейтинга">
+						<img src="../img/star.svg" alt="заполненная звезда рейтинга">
+						<img src="../img/star.svg" alt="заполненная звезда рейтинга">
+						<img src="../img/star.svg" alt="заполненная звезда рейтинга">
+						<img src="../img/star-empty.svg" alt="пустая звезда рейтинга">
+					</span>
+					<span class="card__price">$299,43</span>
+					<p class="card__discount"><del class="card__old-price">$534,33</del> 24% Off</p>
+				</div>
+				<div class="card__ui">
+					<a class="card__link card__link_fav" href="">
+						<img class="card__icon" src="../img/fav.svg" alt="добавить в избранное">
+					</a>
+					<a class="card__link card__link_add" href="">
+						<img class="card__icon" src="../img/add.svg" alt="добавить в корзину">
+					</a>
+				</div>
+			</article>
+			<article class="card">
+				<img class="card__image" src="../img/nike-air-color-5.png" alt="">
+				<div class="card__info">
+					<h4 class="card__title">Nike Air Max 270 React</h4>
+					<span class="card__rating" aria-label="рейтинг: 4 из 5">
+						<img src="../img/star.svg" alt="заполненная звезда рейтинга">
+						<img src="../img/star.svg" alt="заполненная звезда рейтинга">
+						<img src="../img/star.svg" alt="заполненная звезда рейтинга">
+						<img src="../img/star.svg" alt="заполненная звезда рейтинга">
+						<img src="../img/star-empty.svg" alt="пустая звезда рейтинга">
+					</span>
+					<span class="card__price">$299,43</span>
+					<p class="card__discount"><del class="card__old-price">$534,33</del> 24% Off</p>
+				</div>
+				<div class="card__ui">
+					<a class="card__link card__link_fav" href="">
+						<img class="card__icon" src="../img/fav.svg" alt="добавить в избранное">
+					</a>
+					<a class="card__link card__link_add" href="">
+						<img class="card__icon" src="../img/add.svg" alt="добавить в корзину">
+					</a>
+				</div>
+			</article>
+			<article class="card">
+				<img class="card__image" src="../img/nike-air.png" alt="">
+				<div class="card__info">
+					<h4 class="card__title">Nike Air Max 270 React</h4>
+					<span class="card__rating" aria-label="рейтинг: 4 из 5">
+						<img src="../img/star.svg" alt="заполненная звезда рейтинга">
+						<img src="../img/star.svg" alt="заполненная звезда рейтинга">
+						<img src="../img/star.svg" alt="заполненная звезда рейтинга">
+						<img src="../img/star.svg" alt="заполненная звезда рейтинга">
+						<img src="../img/star-empty.svg" alt="пустая звезда рейтинга">
+					</span>
+					<span class="card__price">$299,43</span>
+					<p class="card__discount"><del class="card__old-price">$534,33</del> 24% Off</p>
+				</div>
+				<div class="card__ui">
+					<a class="card__link card__link_fav" href="">
+						<img class="card__icon" src="../img/fav.svg" alt="добавить в избранное">
+					</a>
+					<a class="card__link card__link_add" href="">
+						<img class="card__icon" src="../img/add.svg" alt="добавить в корзину">
+					</a>
+				</div>
+			</article>
+			<article class="card">
+				<img class="card__image" src="../img/bag-brown.png" alt="">
+				<div class="card__info">
+					<h4 class="card__title">Nike Air Max 270 React</h4>
+					<span class="card__rating" aria-label="рейтинг: 4 из 5">
+						<img src="../img/star.svg" alt="заполненная звезда рейтинга">
+						<img src="../img/star.svg" alt="заполненная звезда рейтинга">
+						<img src="../img/star.svg" alt="заполненная звезда рейтинга">
+						<img src="../img/star.svg" alt="заполненная звезда рейтинга">
+						<img src="../img/star-empty.svg" alt="пустая звезда рейтинга">
+					</span>
+					<span class="card__price">$299,43</span>
+					<p class="card__discount"><del class="card__old-price">$534,33</del> 24% Off</p>
+				</div>
+				<div class="card__ui">
+					<a class="card__link card__link_fav" href="">
+						<img class="card__icon" src="../img/fav.svg" alt="добавить в избранное">
+					</a>
+					<a class="card__link card__link_add" href="">
+						<img class="card__icon" src="../img/add.svg" alt="добавить в корзину">
+					</a>
+				</div>
+			</article>
+		</div>
+		<aside class="catalog__paginator paginator">
+			<ol class="paginator__list">
+				<li class="paginator__item">
+					<a class="paginator__link" href="">1</a>
+				</li>
+				<li class="paginator__item">
+					<a class="paginator__link" href="">2</a>
+				</li>
+				<li class="paginator__item">
+					<a class="paginator__link paginator__link_active" href="">3</a>
+				</li>
+				<li class="paginator__item">
+					<a class="paginator__link" href="">4</a>
+				</li>
+				<li class="paginator__item">
+					<a class="paginator__link" href="">5</a>
+				</li>
+			</ol>
+		</aside>
+	</main>
+	<footer class="footer">
+		<div class="footer__content">
+			<div class="footer__company">
+				<section class="about-company">
+					<a class="footer__logo logo">
+						<img class="logo__image" src="../img/e-comm-logo.svg" alt="Логотип сайта" width="135" height="44">
+					</a>
+					<p class="about-company__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.Since the 1500s, when an unknown printer.</p>
+				</section>
+				<section class="follow-us">
+					<h3 class="follow-us__heading">Follow Us</h3>
+					<p class="follow-us__text">Since the 1500s, when an unknown printer took a galley of type and scrambled.</p>
+					<a href="" class="follow-us__link" aria-label="Ссылка на фейсбук компании">
+						<img src="../img/facebook.svg" alt="иконка фейсбука">
+					</a>
+					<a href="" class="follow-us__link" aria-label="Ссылка на твиттер компании">
+						<img src="../img/twitter.svg" alt="иконка твиттера">
+					</a>
+				</section>
+				<section class="contact-us">
+					<h3 class="contact-us__heading">Contact Us</h3>
+					<address class="contact-us__text">E-Comm , 4578 Marmora Road, Glasgow D04 89GR</address>
+				</section>
+			</div>
+			<div class="footer__links">
+				<section class="footer__information">
+					<h3 class="footer__title">Information</h3>
+					<ul class="footer__list">
+						<li class="footer__item">
+							<a class="footer__link" href="">About Us</a>
+						</li>
+						<li class="footer__item">
+							<a class="footer__link" href="">Information</a>
+						</li>
+						<li class="footer__item">
+							<a class="footer__link" href="">Privacy Policy</a>
+						</li>
+						<li class="footer__item">
+							<a class="footer__link" href="">Terms & Conditions</a>
+						</li>
+					</ul>
+				</section>
+				<section class="fotter__service">
+					<h3 class="footer__title">Service</h3>
+					<ul class="footer__list">
+						<li class="footer__item">
+							<a class="footer__link" href="">About Us</a>
+						</li>
+						<li class="footer__item">
+							<a class="footer__link" href="">Information</a>
+						</li>
+						<li class="footer__item">
+							<a class="footer__link" href="">Privacy Policy</a>
+						</li>
+						<li class="footer__item">
+							<a class="footer__link" href="">Terms & Conditions</a>
+						</li>
+					</ul>
+				</section>
+				<section class="footer__account">
+					<h3 class="footer__title">My Account</h3>
+					<ul class="footer__list">
+						<li class="footer__item">
+							<a class="footer__link" href="">About Us</a>
+						</li>
+						<li class="footer__item">
+							<a class="footer__link" href="">Information</a>
+						</li>
+						<li class="footer__item">
+							<a class="footer__link" href="">Privacy Policy</a>
+						</li>
+						<li class="footer__item">
+							<a class="footer__link" href="">Terms & Conditions</a>
+						</li>
+					</ul>
+				</section>
+				<section class="footer__offers">
+					<h3 class="footer__title">Our Offers</h3>
+					<ul class="footer__list">
+						<li class="footer__item">
+							<a class="footer__link" href="">About Us</a>
+						</li>
+						<li class="footer__item">
+							<a class="footer__link" href="">Information</a>
+						</li>
+						<li class="footer__item">
+							<a class="footer__link" href="">Privacy Policy</a>
+						</li>
+						<li class="footer__item">
+							<a class="footer__link" href="">Terms & Conditions</a>
+						</li>
+					</ul>
+				</section>
+			</div>
+			<hr class="footer__line">
+			<div class="footer__info">
+				<p class="footer__copy">© 2018 Ecommerce theme by www.bisenbaev.com</p>
+				<div class="footer__banks bank">
+					<a href="" class="bank__link">
+						<img src="../img/western-union.png" alt="" class="bank__logo">
+					</a>
+					<a href="" class="bank__link">
+						<img src="../img/mastercard.png" alt="" class="bank__logo">
+					</a>
+					<a href="" class="bank__link">
+						<img src="../img/paypal.png" alt="" class="bank__logo">
+					</a>
+					<a href="" class="bank__link">
+						<img src="../img/visa.png" alt="" class="bank__logo">
+					</a>
+				</div>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>
