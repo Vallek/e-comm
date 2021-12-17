@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>E-comm - Cart</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Raleway:wght@400;700&display=swap" rel="stylesheet">  
+	<link rel="stylesheet" href="../css/normalize.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="icon" href="../img/e-comm-icon.png" sizes="any" type="image/png">
+	<link rel="icon" href="../img/e-comm-icon.svg" type="image/svg+xml">
+	<script async src="../js/script.js"></script>
+</head>
+<body class="catalog">
+	<header class="header">
+		<div class="header__head">
+			<div class="header__locals locals">
+				<select class="locals__select" name="lang" id="lang">
+					<option class="locals__value" value="">EN</option>
+					<option class="locals__value" value="">RU</option>
+				</select>
+				<select class="locals__select" name="currency" id="currency">
+					<option class="locals__value" value="">USD</option>
+					<option class="locals__value" value="">RUB</option>
+				</select>
+			</div>
+			<div class="header__user-ui">
+				<a class="header__user-profile" href="">My profile</a>
+				<a class="header__cart cart" href="">
+					<img class="cart__ico" src="../img/cart.svg" alt="иконка корзины">
+					<span class="cart__number">2</span>
+				</a>
+				<span class="header__items">Items</span>
+				<span class="header__sum">$0.00</span>
+				<form class="header__search-form" method="GET">
+					<input class="header__search-input visually-hidden" type="search" name="search">
+					<button class="header__search-button" type="button"></button>
+				</form>
+			</div>
+		</div>
+		<div class="header__main">
+			<a class="header__logo logo" href="../index.html">
+				<img class="logo__image" src="../img/e-comm-logo.svg" alt="Логотип сайта" width="135" height="44">
+			</a>
+			<nav class="header__menu menu">
+				<ul class="menu__list">
+					<li class="menu__item">
+						<a href="../index.html" class="menu__link menu__link_active">HOME</a>
+						<section class="menu__dropdown visually-hidden">
+							<h3>Category</h3>
+							<ul class="menu__submenu submenu">
+								<li class="submenu__item">
+									<a href="" class="submenu__link">Coporate Shoes </a>
+								</li>
+								<li class="submenu__item">
+									<a href="" class="submenu__link">Sneakers</a>
+								</li>
+								<li class="submenu__item">
+									<a href="" class="submenu__link">Sandals</a>
+								</li>
+								<li class="submenu__item">
+									<a href="" class="submenu__link">Sport Shoe</a>
+								</li>
+								<li class="submenu__item">
+									<a href="" class="submenu__link">Trainers</a>
+								</li>
+								<li class="submenu__item">
+									<a href="" class="submenu__link">Coporate Shoes </a>
+								</li>
+								<li class="submenu__item">
+									<a href="" class="submenu__link">Sneakers</a>
+								</li>
+								<li class="submenu__item">
+									<a href="" class="submenu__link">Sandals</a>
+								</li>
+								<li class="submenu__item">
+									<a href="" class="submenu__link">Sport Shoe</a>
+								</li>
+								<li class="submenu__item">
+									<a href="" class="submenu__link">Trainers</a>
+								</li>
+							</ul>
+							<h3>Category</h3>
+							<ul class="menu__submenu submenu">
+								<li class="submenu__item">
+									<a href="" class="submenu__link">HOT DEAL</a>
+								</li>
+								<li class="submenu__item">
+									<a href="" class="submenu__link">Sunglasses</a>
+								</li>
+								<li class="submenu__item">
+									<a href="" class="submenu__link">Belts</a>
+								</li>
+								<li class="submenu__item">
+									<a href="" class="submenu__link">Handbags</a>
+								</li>
+								<li class="submenu__item">
+									<a href="" class="submenu__link">Sneakers</a>
+								</li>
+								<li class="submenu__item">
+									<a href="" class="submenu__link">HOT DEAL</a>
+								</li>
+								<li class="submenu__item">
+									<a href="" class="submenu__link">Sunglasses</a>
+								</li>
+								<li class="submenu__item">
+									<a href="" class="submenu__link">Belts</a>
+								</li>
+								<li class="submenu__item">
+									<a href="" class="submenu__link">Handbags</a>
+								</li>
+								<li class="submenu__item">
+									<a href="" class="submenu__link">Sneakers</a>
+								</li>
+							</ul>
+							<h3>Category</h3>
+							<ul class="menu__submenu submenu">
+								<li class="submenu__item">
+									<a href="" class="submenu__link">Coporate Shoes </a>
+								</li>
+								<li class="submenu__item">
+									<a href="" class="submenu__link">Sneakers</a>
+								</li>
+								<li class="submenu__item">
+									<a href="" class="submenu__link">Sandals</a>
+								</li>
+								<li class="submenu__item">
+									<a href="" class="submenu__link">Sport Shoe</a>
+								</li>
+								<li class="submenu__item">
+									<a href="" class="submenu__link">Trainers</a>
+								</li>
+							</ul>
+						</section>
+					</li>
+					<li class="menu__item">
+						<a href="#" class="menu__link">BAGS</a>
+					</li>
+					<li class="menu__item">
+						<a href="#" class="menu__link">SNEAKERS</a>
+					</li>
+					<li class="menu__item">
+						<a href="#" class="menu__link">BELT</a>
+					</li>
+					<li class="menu__item">
+						<a href="#" class="menu__link">CONTACT</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<main class="cart__main">
+
+	</main>
+	<footer class="footer">
+		<div class="footer__content">
+			<div class="footer__company">
+				<section class="about-company">
+					<a class="footer__logo logo">
+						<img class="logo__image" src="../img/e-comm-logo.svg" alt="Логотип сайта" width="135" height="44">
+					</a>
+					<p class="about-company__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.Since the 1500s, when an unknown printer.</p>
+				</section>
+				<section class="follow-us">
+					<h3 class="follow-us__heading">Follow Us</h3>
+					<p class="follow-us__text">Since the 1500s, when an unknown printer took a galley of type and scrambled.</p>
+					<a href="" class="follow-us__link" aria-label="Ссылка на фейсбук компании">
+						<img src="../img/facebook.svg" alt="иконка фейсбука">
+					</a>
+					<a href="" class="follow-us__link" aria-label="Ссылка на твиттер компании">
+						<img src="../img/twitter.svg" alt="иконка твиттера">
+					</a>
+				</section>
+				<section class="contact-us">
+					<h3 class="contact-us__heading">Contact Us</h3>
+					<address class="contact-us__text">E-Comm , 4578 Marmora Road, Glasgow D04 89GR</address>
+				</section>
+			</div>
+			<div class="footer__links">
+				<section class="footer__information">
+					<h3 class="footer__title">Information</h3>
+					<ul class="footer__list">
+						<li class="footer__item">
+							<a class="footer__link" href="">About Us</a>
+						</li>
+						<li class="footer__item">
+							<a class="footer__link" href="">Information</a>
+						</li>
+						<li class="footer__item">
+							<a class="footer__link" href="">Privacy Policy</a>
+						</li>
+						<li class="footer__item">
+							<a class="footer__link" href="">Terms & Conditions</a>
+						</li>
+					</ul>
+				</section>
+				<section class="fotter__service">
+					<h3 class="footer__title">Service</h3>
+					<ul class="footer__list">
+						<li class="footer__item">
+							<a class="footer__link" href="">About Us</a>
+						</li>
+						<li class="footer__item">
+							<a class="footer__link" href="">Information</a>
+						</li>
+						<li class="footer__item">
+							<a class="footer__link" href="">Privacy Policy</a>
+						</li>
+						<li class="footer__item">
+							<a class="footer__link" href="">Terms & Conditions</a>
+						</li>
+					</ul>
+				</section>
+				<section class="footer__account">
+					<h3 class="footer__title">My Account</h3>
+					<ul class="footer__list">
+						<li class="footer__item">
+							<a class="footer__link" href="">About Us</a>
+						</li>
+						<li class="footer__item">
+							<a class="footer__link" href="">Information</a>
+						</li>
+						<li class="footer__item">
+							<a class="footer__link" href="">Privacy Policy</a>
+						</li>
+						<li class="footer__item">
+							<a class="footer__link" href="">Terms & Conditions</a>
+						</li>
+					</ul>
+				</section>
+				<section class="footer__offers">
+					<h3 class="footer__title">Our Offers</h3>
+					<ul class="footer__list">
+						<li class="footer__item">
+							<a class="footer__link" href="">About Us</a>
+						</li>
+						<li class="footer__item">
+							<a class="footer__link" href="">Information</a>
+						</li>
+						<li class="footer__item">
+							<a class="footer__link" href="">Privacy Policy</a>
+						</li>
+						<li class="footer__item">
+							<a class="footer__link" href="">Terms & Conditions</a>
+						</li>
+					</ul>
+				</section>
+			</div>
+			<hr class="footer__line">
+			<div class="footer__info">
+				<p class="footer__copy">© 2018 Ecommerce theme by www.bisenbaev.com</p>
+				<div class="footer__banks bank">
+					<a href="" class="bank__link">
+						<img src="../img/western-union.png" alt="" class="bank__logo">
+					</a>
+					<a href="" class="bank__link">
+						<img src="../img/mastercard.png" alt="" class="bank__logo">
+					</a>
+					<a href="" class="bank__link">
+						<img src="../img/paypal.png" alt="" class="bank__logo">
+					</a>
+					<a href="" class="bank__link">
+						<img src="../img/visa.png" alt="" class="bank__logo">
+					</a>
+				</div>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>

@@ -208,7 +208,9 @@ html {
 	flex-wrap: wrap;
 	align-items: center;
 	justify-content: space-between;
-	min-height: 97px;
+	padding-top: 29px;
+	padding-bottom: 21px;
+	position: relative;
 }
 
 .menu__list {
@@ -236,10 +238,59 @@ html {
 	color: var(--prime-blue);
 }
 
-.menu__submenu {
+/* Menu dropdown */
+.menu__dropdown {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateY(calc(100% - 7px)) translateX(-50%);
+	display: flex;
+	flex-wrap: wrap;
+	width: max-content;
+	padding: 37px 33px 59px 84px;
+	border-top: 2px solid #F1F3F4;
+	background-color: #fff;
+}
+
+.menu__dropdown::before {
+	content: '';
+	display: block;
+	position: absolute;
+	top: -1px;
+	transform: translateY(-100%);
+	border: 8px solid transparent;
+	border-top: none;
+	border-bottom: 10px solid #F1F3F4;
+}
+
+.submenu__list {
 	list-style: none;
 	margin: 0;
+	margin-right: 59px;
 	padding: 0;
+}
+
+.submenu__list_2-col {
+	columns: 2;
+	gap: 45px;
+}
+
+.submenu__heading {
+	color: var(--text-light-grey);
+	font-size: 22px;
+	font-weight: 500;
+	margin-bottom: 13px;
+}
+
+.submenu__link {
+	color: var(--text-black);
+	font-size: 16px;
+	line-height: 2;
+	text-decoration: none;
+}
+
+.submenu__link:hover {
+	text-decoration: underline;
 }
 
 /* Intro Offer */
@@ -402,6 +453,19 @@ html {
 	border-radius: 5px;
 }
 
+.card_hot::before {
+	content: 'HOT';
+	display: inline-block;
+	position: absolute;
+	z-index: 2;
+	top: 0;
+	left: 0;
+	padding: 6px 14px;
+	font-size: 18px;
+	color: #fff;
+	background-color: #FF4858;
+}
+
 .card__image {
 	position: relative;
 	z-index: 1;
@@ -470,7 +534,7 @@ html {
 	align-items: center;
 	position: absolute;
 	top: 1em;
-	z-index: 1;
+	z-index: 2;
 	background-color: rgba(255,255,255,0.95);
 }
 
@@ -1031,6 +1095,11 @@ html {
 	margin-bottom: 26px;
 }
 
+.sort__options {
+	display: flex;
+	align-items: center;
+}
+
 .sort__items {
 	margin-right: 48px;
 }
@@ -1041,10 +1110,11 @@ html {
 
 .sort__select {
 	min-width: 128px;
-	min-height: 38px;
+	height: 38px;
 	border: 2px solid #F1F3F4;
 	border-radius: 5px;
 	padding: 0 17px;
+	margin-right: 57px;	
 	background-color: transparent;
 	-moz-appearance: none;
 	-webkit-appearance: none;
@@ -1053,6 +1123,10 @@ html {
 	background-repeat: no-repeat;
 	background-position: calc(100% - 17px) 50%;
 	cursor: pointer;
+}
+
+.sort__option {
+	padding-inline: 17px;
 }
 
 .sort__view-button {

@@ -9,3 +9,21 @@ searchButton.addEventListener('click', handleSearchBar);
 function handleSearchBar() {
 	searchBar.classList.toggle('visually-hidden');
 }
+
+// Show\hide dropdown menu 
+const headerLine = document.querySelector('.header__main');
+const dropdownMenu = document.querySelector('.menu__dropdown');
+
+headerLine.addEventListener('mouseenter', ShowDropdownMenu);
+headerLine.addEventListener('mouseleave', HideDropdownMenu);
+
+function ShowDropdownMenu() {
+	dropdownMenu.classList.remove('visually-hidden');
+}
+
+function HideDropdownMenu(el) {
+	// Check if user not hover dropdown menu
+	if (el != dropdownMenu) {
+		dropdownMenu.classList.add('visually-hidden');
+	}
+}
