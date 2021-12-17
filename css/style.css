@@ -1017,6 +1017,65 @@ html {
 	background-color: var(--light-border);
 }
 
+/* Catalog Sorting */
+.sort {
+	box-sizing: border-box;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	min-height: 58px;
+	padding-left: 22px;
+	background-color: var(--light-border);
+	margin-bottom: 26px;
+}
+
+.sort__items {
+	margin-right: 48px;
+}
+
+.sort__label {
+	margin-right: 13px;
+}
+
+.sort__select {
+	min-width: 128px;
+	min-height: 38px;
+	border: 2px solid #F1F3F4;
+	border-radius: 5px;
+	padding: 0 17px;
+	background-color: transparent;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
+	background-image: url('../img/arrow-down.svg');
+	background-repeat: no-repeat;
+	background-position: calc(100% - 17px) 50%;
+	cursor: pointer;
+}
+
+.sort__view-button {
+	width: 55px;
+	height: 58px;
+	border: none;
+	background-color: transparent;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+}
+
+.sort__view-button_active {
+	background-color: #F1F3F4;
+}
+
+.sort__view-button_grid {
+	background-image: url('../img/sort-grid.svg');
+}
+
+.sort__view-button_list {
+	background-image: url('../img/sort-list.svg');
+}
+
 /* Catalog content */
 .catalog__breadcrumbs {
 	grid-column: 2 / -2;
@@ -1041,6 +1100,15 @@ html {
 	content: '/';
 	display: inline-block;
 	padding: 0 9px;
+}
+
+.breadcrumbs__link {
+	text-decoration: none;
+	color: #33A0FF;
+}
+
+.breadcrumbs__link_current {
+	color: var(--text-black)
 }
 
 .catalog__cards {
