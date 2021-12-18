@@ -14,6 +14,7 @@ function handleSearchBar() {
 const headerLine = document.querySelector('.header__main');
 const dropdownMenu = document.querySelector('.menu__dropdown');
 
+// Separate event listeners for mouse in and out 
 headerLine.addEventListener('mouseenter', ShowDropdownMenu);
 headerLine.addEventListener('mouseleave', HideDropdownMenu);
 
