@@ -73,6 +73,17 @@ html {
 	--light-white: #FAFAFB;
 }
 
+/* Global */
+body {
+	min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+	flex-grow: 1;
+}
+
 /* Index */
 .index {
 	background-color: #fff;
@@ -82,6 +93,7 @@ html {
 
 /* Header */
 .header {
+	width: 100%;
 	max-width: 1255px;
 	margin: 0 auto;
 }
