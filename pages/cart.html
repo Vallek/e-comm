@@ -11,7 +11,8 @@
 	<link rel="stylesheet" href="../css/style.css">
 	<link rel="icon" href="../img/e-comm-icon.png" sizes="any" type="image/png">
 	<link rel="icon" href="../img/e-comm-icon.svg" type="image/svg+xml">
-	<script async src="../js/script.js"></script>
+	<script async src="../js/header.js"></script>
+	<script async src="../js/cart.js"></script>
 </head>
 <body class="catalog">
 	<header class="header">
@@ -158,7 +159,111 @@
 		</div>
 	</header>
 	<main class="cart__main">
-
+		<nav class="cart__breadcrumbs breadcrumbs">
+			<ol class="breadcrumbs__list">
+				<li class="breadcrumbs__item">
+					<a class="breadcrumbs__link" href="">Home</a>
+				</li>
+				<li class="breadcrumbs__item">
+					<a class="breadcrumbs__link" href="">Hot Deals</a>
+				</li>
+				<li class="breadcrumbs__item">
+					<a class="breadcrumbs__link breadcrumbs__link_current">Nike Airmax 270 React</a>
+				</li>
+			</ol>	
+		</nav>
+		<section class="cart__contents">
+			<table class="cart__table">
+				<thead>
+					<tr>
+						<th class="visually-hidden">Close Buttons</th>
+						<th>PRODUCT</th>
+						<th>PRICE</th>
+						<th>QTY</th>
+						<th>UNIT PRICE</th>
+					</tr>
+				</thead>
+				<tbody class="cart__body">
+					<tr class="cart__item">
+						<td>
+							<button class="cart__remove" aria-label="remove item from cart"></button>
+						</td>
+						<td>
+							<img class="cart__image" src="../img/nike-air-color-2.png" alt="">
+							<span>Nike Airmax 270 react</span>
+						</td>
+						<td>
+							$<span class="cart__item-price">998</span>
+						</td>
+						<td>
+							<div class="qty__ui">
+								<button class="qty__button qty__minus" type="button">-</button>
+								<input form="cart" class="qty__number" type="text" name="Nike Airmax 270 react" id="" value="2" min="0">
+								<button class="qty__button qty__plus" type="button">+</button>
+							</div>
+						</td>
+						<td>
+							<span>$499</span>
+						</td>
+					</tr>
+					<tr class="cart__item">
+						<td>
+							<button class="cart__remove" aria-label="remove item from cart"></button>
+						</td>
+						<td>
+							<img class="cart__image" src="../img/nike-air-color-3.png" alt="">
+							<span>Nike Airmax 270 react</span>
+						</td>
+						<td>
+							$<span class="cart__item-price">998</span>
+						</td>
+						<td>
+							<div class="qty__ui">
+								<button class="qty__button qty__minus" type="button">-</button>
+								<input form="cart" class="qty__number" type="text" name="Nike Airmax 270 react" id="" value="2" min="0">
+								<button class="qty__button qty__plus" type="button">+</button>
+							</div>
+						</td>
+						<td>
+							<span>$499</span>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="cart__footer">
+				<form class="cart__redeem-form" method="POST">
+					<input class="cart__redeem-input" type="text" name="Voucher-code" id="" placeholder="Voucher code">
+					<button class="cart__redeem-button" type="submit">Redeem</button>
+				</form>
+				<div class="cart__total total">
+					<table class="total__table">
+						<tbody>
+							<tr>
+								<td>Subtotal</td>
+								<td>$998</td>
+							</tr>
+							<tr>
+								<td>Shipping fee</td>
+								<td>$20</td>
+							</tr>
+							<tr>
+								<td>Coupon</td>
+								<td>No</td>
+							</tr>
+						</tbody>
+						<tfoot>
+							<tr>
+								<td>TOTAL</td>
+								<td class="total__price">$1018</td>
+							</tr>
+						</tfoot>
+					</table>
+					<form id="cart" method="GET">
+						<button class="cart__checkout" type="submit">Check out</button>
+					</form>
+				</div>
+			</div>
+		</section>
 	</main>
 	<footer class="footer">
 		<div class="footer__content">
