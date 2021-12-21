@@ -1,8 +1,8 @@
-// Плюс минус количество оп нажатию на кнопки
+// Плюс минус количество по нажатию на кнопки
 // Получаем все инпуты
 const qtyInput = document.querySelectorAll('.qty__number');
 
-// EВыполняем функцию для всех инпутов
+// Выполняем функцию для каждого из инпутов
 qtyInput.forEach(function handleQty(el) {
 	// Получаем родителя, чтобы найти кнопки каждого
 	let qtyUi = el.parentElement;
