@@ -61,6 +61,74 @@ cartItem.forEach(function handleRemove(el) {
 		totalNode.textContent = 0;
 		calcPrice();
 	}
-}); 
+});
 
+// Появление попапа
+const checkoutButton = document.querySelector('.cart__checkout-button');
+const checkoutPopup = document.querySelector('.cart__checkout');
+const pageBody = document.querySelector('body');
+checkoutButton.addEventListener('click', showCheckoutPopup);
+function showCheckoutPopup(el) {
+	checkoutPopup.classList.remove('visually-hidden');
+	pageBody.classList.add('cart-page_dim');
+}
 
+// Закрыть попап
+const closePopupButton = document.querySelector('.checkout__close-button');
+closePopupButton.addEventListener('click', closePopup);
+function closePopup() {
+	checkoutPopup.classList.add('visually-hidden');
+	pageBody.classList.remove('cart-page_dim');
+}
+
+// Предыдущий слайд по кнопке назад
+const backButton = document.querySelector('.checkout__back-button');
+let activeSlide = document.querySelector('.checkout__slide_active');
+let allSlides = document.querySelectorAll('.checkout__slide');
+
+backButton.addEventListener('click', prevSlide);
+
+function prevSlide() {
+	for (let i = 0; i < allSlides.length; i++) {
+		let all = allSlides[i].classList.contains('checkout__slide_active');
+		if (all == true) {
+			let active = allSlides[i];
+			let prev = allSlides[i - 1];
+			if (prev == undefined ||
+				i == 0) {
+				closePopup();
+			}
+			else {
+				active.classList.remove('checkout__slide_active');
+				active.classList.add('visually-hidden');
+				prev.classList.add('checkout__slide_active');
+				prev.classList.remove('visually-hidden');
+			}
+		}
+	}
+}
+
+// Следующий слайд по кнопке отправки (в реальности нужно еще отправить данные через js)
+let submitButton = document.querySelectorAll('.checkout__submit');
+submitButton.forEach(function handleNext(el) {
+	el.addEventListener('click', nextSlide);
+});
+
+function nextSlide() {
+	for (let i = 0; i < allSlides.length; i++) {
+		let all = allSlides[i].classList.contains('checkout__slide_active');
+		if (all == true) {
+			let active = allSlides[i];
+			let next = allSlides[++i];
+			if (next == undefined) {
+				closePopup();
+			}
+			else {
+				active.classList.remove('checkout__slide_active');
+				active.classList.add('visually-hidden');
+				next.classList.add('checkout__slide_active');
+				next.classList.remove('visually-hidden');
+			}
+		}
+	}
+}

@@ -53,16 +53,6 @@
 @font-face {
 	font-family: 'Raleway';
 	font-style: normal;
-	font-weight: 600;
-	src: local('Raleway'),
-	url('../fonts/raleway-v22-latin-600.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-	url('../fonts/raleway-v22-latin-600.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-
-/* raleway-700 - latin */
-@font-face {
-	font-family: 'Raleway';
-	font-style: normal;
 	font-weight: 700;
 	src: local('Raleway'),
 	url('../fonts/raleway-v22-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
@@ -1279,6 +1269,21 @@ main {
 	font-weight: 400;
 }
 
+.cart-page_dim {
+	overflow: hidden;
+}
+
+.cart-page_dim::before {
+	content: '';
+	position: fixed;
+	z-index: 2;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(34, 34, 34, 0.3);
+}
+
 .cart__main {
 	margin-bottom: 156px;
 }
@@ -1425,6 +1430,7 @@ main {
 	font-size: 18px;
 	width: 310px;
 	height: 60px;
+	border: none;
 	background-color: #33A0FF;
 }
 
@@ -1444,17 +1450,6 @@ main {
 	padding: 41px 98px 78px 88px;
 	background-color: #fff;
 	z-index: 3;
-}
-
-.cart-page::before {
-	content: '';
-	position: fixed;
-	z-index: 2;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-color: rgba(34, 34, 34, 0.3);
 }
 
 .checkout__buttons {

@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Raleway:wght@400;600;700&display=swap" rel="stylesheet">  
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Raleway:wght@400;600;700&display=swap" rel="stylesheet">   
 	<link rel="stylesheet" href="../css/normalize.css">
 	<link rel="stylesheet" href="../css/style.css">
 	<link rel="icon" href="../img/e-comm-icon.png" sizes="any" type="image/png">
@@ -258,13 +258,11 @@
 							</tr>
 						</tfoot>
 					</table>
-					<form id="cart" method="GET">
-						<button class="cart__checkout-button" type="submit">Check out</button>
-					</form>
+					<button class="cart__checkout-button" type="button">Check out</button>
 				</div>
 			</div>
 		</section>
-		<section class="cart__checkout checkout">
+		<section class="cart__checkout checkout visually-hidden">
 			<div class="checkout__buttons">
 				<button class="checkout__back-button" type="button" aria-label="Кнопка назад"></button>
 				<button class="checkout__close-button" type="button" aria-label="Кнопка закрыть попап"></button>
@@ -275,7 +273,7 @@
 				<span class="checkout__step">2</span>
 				<span class="checkout__step">3</span>
 			</div>
-			<form class="checkout__user visually-hidden">
+			<form class="checkout__slide checkout__user checkout__slide_active">
 				<div class="checkout__user-content">
 					<div class="checkout__line">
 						<input type="text" name="first-name" id="first-name" placeholder="First Name" required>
@@ -302,9 +300,9 @@
 						<input type="tel" name="phone" id="phone" placeholder="Mobile Phone" required>
 					</div>
 				</div>
-				<button class="checkout__submit" type="submit">Go to Payment</button>
+				<button class="checkout__submit" type="button">Go to Payment</button>
 			</form>
-			<form class="checkout__card credit-card visually-hidden" method="GET">
+			<form class="checkout__slide checkout__card credit-card visually-hidden" method="GET">
 				<img class="credit-card__image" src="../img/CreditCard.jpg" alt="Изображение банковской карты">
 				<div class="credit-card__content">
 					<input name="ccn" id="ccn" type="tel" inputmode="numeric" pattern="[0-9\s]{13,19}" autocomplete="cc-number" maxlength="19" placeholder="Card Number">
@@ -316,12 +314,12 @@
 						<label class="credit-card__save-label" for="save-card">Save this credit card</label>
 					</div>
 				</div>
-				<button class="checkout__submit" type="submit">Confirm</button>
+				<button class="checkout__submit" type="button">Confirm</button>
 			</form>
-			<section class="checkout__finish">
+			<section class="checkout__slide checkout__finish visually-hidden">
 				<div class="checkout__finish-checked" role="presentation" aria-roledescription="Finish checkmark"></div>
 				<span class="checkout__finish-text">Success</span>
-				<button class="checkout__submit" type="submit">Complete</button>
+				<button class="checkout__submit" type="button">Complete</button>
 			</section>
 		</section>
 	</main>
