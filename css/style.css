@@ -622,17 +622,21 @@ main {
 }
 
 .now-banner_index {
-	min-height: 691px;
+	min-height: 600px;
 	margin-bottom: 97px;
-	background-image: url('../img/banner-shoe.webp'), linear-gradient(0deg, var(--prime-blue) 523px, white 523px);
-	background-repeat: no-repeat;
-	background-position: right top;
+	background-image: linear-gradient(0deg, var(--prime-blue) 523px, white 523px);
 }
 
 @media screen and (max-width: 690px) {
 	.now-banner_index {
 		background-position: center top;
 	}
+}
+
+.now-banner__content_index {
+	background-image: url('../img/banner-shoe.webp');
+	background-repeat: no-repeat;
+	background-position: right top;
 }
 
 .now-banner_catalog {
