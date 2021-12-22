@@ -27,7 +27,7 @@ qtyInput.forEach(function handleQty(el) {
 });
 
 // Расчет итоговой стоимости
-let cartItem = document.querySelectorAll('.cart__item');
+const cartItem = document.querySelectorAll('.cart__item');
 const totalNode = document.querySelector('.total__price');
 // Функция расчета итоговой стоимости
 function calcPrice() {
@@ -83,8 +83,8 @@ function closePopup() {
 
 // Предыдущий слайд по кнопке назад
 const backButton = document.querySelector('.checkout__back-button');
-let activeSlide = document.querySelector('.checkout__slide_active');
-let allSlides = document.querySelectorAll('.checkout__slide');
+const activeSlide = document.querySelector('.checkout__slide_active');
+const allSlides = document.querySelectorAll('.checkout__slide');
 
 backButton.addEventListener('click', prevSlide);
 
@@ -109,7 +109,7 @@ function prevSlide() {
 }
 
 // Следующий слайд по кнопке отправки (в реальности нужно еще отправить данные через js)
-let submitButton = document.querySelectorAll('.checkout__submit');
+const submitButton = document.querySelectorAll('.checkout__submit');
 submitButton.forEach(function handleNext(el) {
 	el.addEventListener('click', nextSlide);
 });

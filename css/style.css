@@ -62,7 +62,8 @@ html {
 	--text-black: #262626;
 	--text-black-blue: #22262A;
 	--text-light-grey: #C1C8CE;
-	--light-blue: #BCDDFE;
+	--light-blue: #33A0FF;
+	--white-blue: #BCDDFE;
 	--light-border: #F6F7F8;
 	--light-white: #FAFAFB;
 }
@@ -885,7 +886,7 @@ main {
 	max-width: 508px;
 	height: 64px;
 	padding: 0 21px;
-	border: 2px solid var(--light-blue);
+	border: 2px solid var(--white-blue);
 	border-top-left-radius: 5px;
 	border-bottom-left-radius: 5px;
 	border-right: none;
@@ -964,11 +965,11 @@ main {
 }
 
 .filter__radio:checked + .filter__label {
-	color: #33A0FF;
+	color: var(--light-blue);
 }
 
 .filter__radio:checked ~ .filter__number {
-	color: #33A0FF;
+	color: var(--light-blue);
 }
 
 .price-range__ranges {
@@ -1190,7 +1191,7 @@ main {
 
 .breadcrumbs__link {
 	text-decoration: none;
-	color: #33A0FF;
+	color: var(--light-blue);
 }
 
 .breadcrumbs__link_current {
@@ -1320,7 +1321,7 @@ main {
 	transform: translateY(-50%);
 	border: none;
 	background-color: transparent;
-	color: #33A0FF;
+	color: var(--light-blue);
 	font-size: 18px;
 	font-weight: 700;
 }
@@ -1397,7 +1398,7 @@ main {
 	max-width: 251px;
 	height: 60px;
 	padding: 0 20px;
-	border: 2px solid var(--light-blue);
+	border: 2px solid var(--white-blue);
 	border-top-left-radius: 5px;
 	border-bottom-left-radius: 5px;
 	border-right: none;
@@ -1425,7 +1426,7 @@ main {
 	width: 310px;
 	height: 60px;
 	border: none;
-	background-color: #33A0FF;
+	background-color: var(--light-blue);
 }
 
 /* Checkout Popup */
@@ -1727,13 +1728,13 @@ main {
 	color: #fff;
 	font-size: 24px;
 	font-weight: 700;
-	background-color: #33A0FF;
+	background-color: var(--light-blue);
 	cursor: pointer;
 }
 
 /* Footer */
 .footer {
-	background-color: var(--light-blue);
+	background-color: var(--white-blue);
 	padding: 165px 30px 54px;
 }
 
