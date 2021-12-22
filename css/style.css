@@ -492,7 +492,7 @@ main {
 
 @media screen and (max-width: 1305px) {
 	.card {
-		flex: 1 1 auto;
+		flex: 1 1 250px;
 	}
 }
 
@@ -510,6 +510,7 @@ main {
 }
 
 .card__image {
+	object-fit: cover;
 	position: relative;
 	z-index: 1;
 	max-width: 100%;
@@ -621,7 +622,7 @@ main {
 }
 
 .now-banner_index {
-	min-height: 600px;
+	min-height: 691px;
 	margin-bottom: 97px;
 	background-image: url('../img/banner-shoe.webp'), linear-gradient(0deg, var(--prime-blue) 523px, white 523px);
 	background-repeat: no-repeat;
@@ -635,8 +636,11 @@ main {
 }
 
 .now-banner_catalog {
-	min-height: 298px;
+	min-height: 322px;
 	margin-bottom: 23px;
+	background-image: url('../img/banner-shoe-small.png'), linear-gradient(0deg, var(--prime-blue) 290px, white 290px);
+	background-repeat: no-repeat;
+	background-position: right top;
 }
 
 .now-banner__content {
@@ -989,6 +993,14 @@ main {
 	grid-row: 2 / -1;
 }
 
+@media screen and (max-width: 640px) {
+	.catalog__sidebar {
+		width: 100%;
+		grid-column: 2 / 4;
+		grid-row: auto;
+	}
+}
+
 .filter__box {
 	display: flex;
 	flex-direction: column;
@@ -1166,8 +1178,15 @@ main {
 	margin-bottom: 26px;
 }
 
+@media screen and (max-width: 1270px) {
+	.sort {
+		padding-right: 1vw;
+	}
+}
+
 .sort__options {
 	display: flex;
+	flex-wrap: wrap;
 	align-items: center;
 }
 
@@ -1224,14 +1243,24 @@ main {
 
 /* Catalog content */
 .breadcrumbs {
-	grid-column: 2 / -2;
-	grid-row: 1 / 2;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	min-height: 51px;
 	margin-bottom: 52px;
 	background-color: var(--light-border);
+}
+
+.catalog__breadcrumbs {
+	grid-column: 2 / -2;
+	grid-row: 1 / 2;
+}
+
+@media screen and (max-width: 640px) {
+	.catalog__breadcrumbs {
+		grid-column: 2 / 4;
+		grid-row: auto;
+	}
 }
 
 .breadcrumbs__list {
@@ -1260,11 +1289,19 @@ main {
 .catalog__cards {
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: space-between;
 	gap: 34px calc((100% - 300px * 3) / 2);
 	grid-column: 3 / 4;
 	grid-row: 4 / 5;
 	max-width: 962px;
 	margin-bottom: 34px;
+}
+
+@media screen and (max-width: 1270px) {
+	.catalog__cards {
+		gap: 34px 2vw;
+		padding-right: 1vw;
+	}
 }
 
 .now-banner_catalog {
@@ -1273,10 +1310,24 @@ main {
 	max-width: 962px;
 }
 
+@media screen and (max-width: 640px) {
+	.now-banner_catalog {
+		grid-column: 2 / 4;
+		grid-row: auto;
+	}
+}
+
 .catalog__sort {
 	grid-column: 3 / 4;
 	grid-row: 3 / 4;
 	max-width: 962px;
+}
+
+@media screen and (max-width: 640px) {
+	.catalog__sort {
+		grid-column: 2 / 4;
+		grid-row: auto;
+	}
 }
 
 .catalog__paginator {
@@ -1284,6 +1335,13 @@ main {
 	grid-row: 5 / 6;
 	max-width: 962px;
 	background-color: var(--light-white);
+}
+
+@media screen and (max-width: 640px) {
+	.catalog__paginator {
+		grid-column: 2 / 4;
+		grid-row: auto;
+	}
 }
 
 .paginator__list {
