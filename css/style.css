@@ -1411,19 +1411,18 @@ main {
 .cart__contents {
 	max-width: 1255px;
 	margin: 0 auto;
+	margin-bottom: 90px;
+	overflow-x: auto;
 }
 
 .cart__table {
 	width: 100%;
-	margin-bottom: 90px;
+	min-width: 700px;
+	min-width: max-content;
 }
 
 .cart__table th {
 	text-align: left;
-}
-
-.cart__body tr {
-	padding: 55px 0;
 }
 
 .qty__ui {
@@ -1485,8 +1484,18 @@ main {
 }
 
 .cart__footer {
+	max-width: 1255px;
+	margin: 0 auto;
+	padding: 0 2vw;
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-between;
+}
+
+@media screen and (max-width: 730px) {
+	.cart__footer {
+		justify-content: center;
+	}
 }
 
 .total__table {
@@ -1513,6 +1522,7 @@ main {
 
 .cart__redeem-form {
 	max-width: 369px;
+	margin-bottom: 2em;
 	display: flex;
 }
 
