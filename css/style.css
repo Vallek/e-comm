@@ -1580,6 +1580,7 @@ main {
 	padding: 41px 98px 78px 88px;
 	background-color: #fff;
 	z-index: 3;
+	overflow: auto;
 }
 
 .checkout__buttons {
@@ -1668,8 +1669,9 @@ main {
 
 .checkout__user-content {
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-between;
-	column-gap: 72px;
+	column-gap: 2vw;
 	margin-bottom: 27px;
 }
 
@@ -1677,12 +1679,20 @@ main {
 	display: flex;
 	flex-direction: column;
 	row-gap: 32px;
+	flex-grow: 1;
+	min-width: 350px;
+	max-width: 380px;
+}
+
+@media screen and (max-width: 905px) {
+	.checkout__line {
+		max-width: 100%;
+	}
 }
 
 .checkout__line > input {
 	box-sizing: border-box;
 	width: 100%;
-	max-width: 380px;
 	height: 50px;
 	padding: 0 14px;
 	border: none;
@@ -1694,7 +1704,6 @@ main {
 	resize: none;
 	box-sizing: border-box;
 	width: 100%;
-	max-width: 380px;
 	height: 122px;
 	padding: 25px 14px;
 	border: none;
@@ -1776,6 +1785,17 @@ main {
 	flex-wrap: wrap;
 	justify-content: space-between;
 	align-items: flex-start;
+	column-gap: 2vw;
+}
+
+@media screen and (max-width: 900px) {
+	.checkout__card {
+		justify-content: center;
+	}
+}
+
+.credit-card__image {
+	margin-bottom: 2em;
 }
 
 .credit-card__content {
