@@ -6,6 +6,7 @@
 	src: local('Poppins'),
 	url('../fonts/poppins-v15-latin-regular.woff2') format('woff2'),
 	url('../fonts/poppins-v15-latin-regular.woff') format('woff');
+	font-display: swap;
 }
 
 @font-face {
@@ -15,6 +16,7 @@
 	src: local('Poppins'),
 	url('../fonts/poppins-v15-latin-500.woff2') format('woff2'), 
 	url('../fonts/poppins-v15-latin-500.woff') format('woff'); 
+	font-display: swap;
 }
 
 @font-face {
@@ -24,6 +26,7 @@
 	src: local('Poppins'),
 	url('../fonts/poppins-v15-latin-600.woff2') format('woff2'),
 	url('../fonts/poppins-v15-latin-600.woff') format('woff'); 
+	font-display: swap;
 }
 
 @font-face {
@@ -33,6 +36,7 @@
 	src: local('Poppins'),
 	url('../fonts/poppins-v15-latin-700.woff2') format('woff2'), 
 	url('../fonts/poppins-v15-latin-700.woff') format('woff'); 
+	font-display: swap;
 }
 
 @font-face {
@@ -42,6 +46,7 @@
 	src: local('Raleway'),
 	url('../fonts/raleway-v22-latin-regular.woff2') format('woff2'), 
 	url('../fonts/raleway-v22-latin-regular.woff') format('woff'); 
+	font-display: swap;
 }
 
 @font-face {
@@ -51,6 +56,7 @@
 	src: local('Raleway'),
 	url('../fonts/raleway-v22-latin-700.woff2') format('woff2'), 
 	url('../fonts/raleway-v22-latin-700.woff') format('woff'); 
+	font-display: swap;
 }
 
 /* Variables */
