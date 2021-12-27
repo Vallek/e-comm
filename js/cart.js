@@ -108,7 +108,7 @@ function prevSlide() {
 	}
 }
 
-// Следующий слайд по кнопке отправки (в реальности нужно еще отправить данные через js)
+// Следующий слайд по кнопке отправки (в реальности нужно еще собрать и отправить данные через js)
 const submitButton = document.querySelectorAll('.checkout__submit');
 submitButton.forEach(function handleNext(el) {
 	el.addEventListener('click', nextSlide);
