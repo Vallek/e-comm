@@ -993,7 +993,7 @@ main {
 
 .catalog__main {
 	display: grid;
-	grid-template-columns: 1fr auto auto 1fr;
+	grid-template-columns: 1fr auto minmax(auto, 962px) 1fr;
 	grid-template-rows: repeat(5, auto);
 	margin-bottom: 155px;
 }
