@@ -1880,7 +1880,8 @@ main {
 	margin-bottom: 87px;
 }
 
-.checkout__submit {
+.checkout__submit,
+.checkout__complete {
 	display: flex;
 	justify-content: center;
 	align-items: center;

@@ -108,11 +108,24 @@ function prevSlide() {
 	}
 }
 
-// Следующий слайд по кнопке отправки (в реальности нужно еще собрать и отправить данные через js)
+// Собираем данные (в реальности они сразу отправляются разными способами, а здесь помещаются в объект для демонстрации) и показываем следующий слайд
 const submitButton = document.querySelectorAll('.checkout__submit');
 submitButton.forEach(function handleNext(el) {
+	el.addEventListener('click', getData);
 	el.addEventListener('click', nextSlide);
 });
+
+function getData() {
+	// Сбор данных с помощью formData() 
+	let formElement = document.querySelector(".checkout__slide_active");
+	let formData = new FormData(formElement);
+	// Помещаем в объект
+	let dataObject = {};
+	formData.forEach(function(value, key){
+		dataObject[key] = value;
+	});
+	console.log(dataObject);
+}
 
 function nextSlide() {
 	for (let i = 0; i < allSlides.length; i++) {
@@ -132,3 +145,7 @@ function nextSlide() {
 		}
 	}
 }
+
+// Закрываем последний слайд
+const completeButton = document.querySelector('.checkout__complete');
+completeButton.addEventListener('click', closePopup);
