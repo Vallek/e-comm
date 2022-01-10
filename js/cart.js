@@ -11,18 +11,34 @@ qtyInput.forEach(function handleQty(el) {
 
 	minusButton.addEventListener('click', minusQty);
 	plusButton.addEventListener('click', plusQty);
-	
+
+	let thisPrice = qtyUi.closest('.cart__item').querySelector('.cart__item-price');
+	let unitPrice = qtyUi.closest('.cart__item').querySelector('.cart__unit-price').textContent;
+	let unitPriceNum = Number(unitPrice);
+
 	function minusQty() {
 		// Минус один, но не меньше единицы
 		if (el.value > 1) {
 			el.value--;
+			// Изменить цену при изменении количества
+			let valueNum = Number(el.value);
+			let finalPriceNum = unitPriceNum * valueNum
+			let finalPrice = String(finalPriceNum);
+			thisPrice.textContent = finalPrice;
 		}
 	}	
 
 	function plusQty() {
 		// Плюс один
 		el.value++ ;
+		// Изменить цену при изменении количества
+		let valueNum = Number(el.value);
+		let finalPriceNum = unitPriceNum * valueNum
+		let finalPrice = String(finalPriceNum);
+		thisPrice.textContent = finalPrice;
 	}	
+
+	
 });
 
 // Расчет итоговой стоимости
