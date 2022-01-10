@@ -25,6 +25,7 @@ qtyInput.forEach(function handleQty(el) {
 			let finalPriceNum = unitPriceNum * valueNum
 			let finalPrice = String(finalPriceNum);
 			thisPrice.textContent = finalPrice;
+			calcPrice();
 		}
 	}	
 
@@ -35,6 +36,7 @@ qtyInput.forEach(function handleQty(el) {
 		let finalPriceNum = unitPriceNum * valueNum
 		let finalPrice = String(finalPriceNum);
 		thisPrice.textContent = finalPrice;
+		calcPrice();
 	}	
 
 	
