@@ -1,3 +1,4 @@
+'use strict';
 // Убавить/прибавить количество по нажатию на кнопки
 // Получаем все инпуты
 const qtyInput = document.querySelectorAll('.qty__number');
@@ -22,7 +23,7 @@ qtyInput.forEach(function handleQty(el) {
 			el.value--;
 			// Изменить цену при изменении количества. Для расчетов переводим тип в числа, а затем обратно в строку.
 			let valueNum = Number(el.value);
-			let finalPriceNum = unitPriceNum * valueNum
+			let finalPriceNum = unitPriceNum * valueNum;
 			let finalPrice = String(finalPriceNum);
 			thisPrice.textContent = finalPrice;
 			calcPrice();
@@ -33,13 +34,12 @@ qtyInput.forEach(function handleQty(el) {
 		// Плюс один
 		el.value++ ;
 		let valueNum = Number(el.value);
-		let finalPriceNum = unitPriceNum * valueNum
+		let finalPriceNum = unitPriceNum * valueNum;
 		let finalPrice = String(finalPriceNum);
 		thisPrice.textContent = finalPrice;
 		calcPrice();
 	}	
 
-	
 });
 
 // Расчет итоговой стоимости
@@ -133,7 +133,7 @@ inputs.forEach(
 				el.reportValidity();
 			} 
 			else {
-			el.validationMessage = '';
+			el.setCustomValidity("");
 			}
 		});
 	}
@@ -146,6 +146,7 @@ submitButton.forEach(function handleValidation(el) {
 
 // Проверяем, все ли инпуты валидные
 function validateData() {
+	let activeSlide = document.querySelector('.checkout__slide_active');
 	let inputs = activeSlide.querySelectorAll('input');
 	let invalidInputs = activeSlide.querySelector('input:invalid');
 	let emptyInputs = activeSlide.querySelector('input').value == "";
