@@ -20,7 +20,7 @@ qtyInput.forEach(function handleQty(el) {
 		// Минус один, но не меньше единицы
 		if (el.value > 1) {
 			el.value--;
-			// Изменить цену при изменении количества
+			// Изменить цену при изменении количества. Для расчетов переводим тип в числа, а затем обратно в строку.
 			let valueNum = Number(el.value);
 			let finalPriceNum = unitPriceNum * valueNum
 			let finalPrice = String(finalPriceNum);
@@ -31,7 +31,6 @@ qtyInput.forEach(function handleQty(el) {
 	function plusQty() {
 		// Плюс один
 		el.value++ ;
-		// Изменить цену при изменении количества
 		let valueNum = Number(el.value);
 		let finalPriceNum = unitPriceNum * valueNum
 		let finalPrice = String(finalPriceNum);
