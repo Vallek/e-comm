@@ -1,7 +1,6 @@
-// Плюс минус количество по нажатию на кнопки
+// Убавить/прибавить количество по нажатию на кнопки
 // Получаем все инпуты
 const qtyInput = document.querySelectorAll('.qty__number');
-
 // Выполняем функцию для каждого из инпутов
 qtyInput.forEach(function handleQty(el) {
 	// Получаем родителя, чтобы найти кнопки каждого
@@ -29,7 +28,7 @@ qtyInput.forEach(function handleQty(el) {
 // Расчет итоговой стоимости
 const cartItem = document.querySelectorAll('.cart__item');
 const totalNode = document.querySelector('.total__price');
-// Функция расчета итоговой стоимости
+
 function calcPrice() {
 	let itemPrices = document.querySelectorAll('.cart__item-price');
 	// Создаем пустой массив с одним элементом заглушкой, чтобы удаление всех позиций не выводило ошибку
@@ -68,7 +67,7 @@ const checkoutButton = document.querySelector('.cart__checkout-button');
 const checkoutPopup = document.querySelector('.cart__checkout');
 const pageBody = document.querySelector('body');
 checkoutButton.addEventListener('click', showCheckoutPopup);
-function showCheckoutPopup(el) {
+function showCheckoutPopup() {
 	checkoutPopup.classList.remove('visually-hidden');
 	pageBody.classList.add('cart-page_dim');
 }
@@ -81,9 +80,8 @@ function closePopup() {
 	pageBody.classList.remove('cart-page_dim');
 }
 
-// Предыдущий слайд по кнопке назад
+// Предыдущий слайд по кнопке назад (в даном случае переключение слайдов можно сделать и вручную для каждого, но здесь сделано через циклы просто для демонстрации)
 const backButton = document.querySelector('.checkout__back-button');
-const activeSlide = document.querySelector('.checkout__slide_active');
 const allSlides = document.querySelectorAll('.checkout__slide');
 
 backButton.addEventListener('click', prevSlide);
@@ -108,25 +106,60 @@ function prevSlide() {
 	}
 }
 
-// Собираем данные (в реальности они сразу отправляются разными способами, а здесь помещаются в объект для демонстрации) и показываем следующий слайд
+// Включение нативной валидации через JS во время ввода (в реальности все это обязательно нужно проверять на сервере, а в клиенте можно добавлять свою валидацию, а не нативную)
+const activeSlide = document.querySelector('.checkout__slide_active');
+const inputs = activeSlide.querySelectorAll('input');
+inputs.forEach(
+	function runValidation(el) {
+		el.addEventListener("input", function() {
+			if (el.checkValidity() == false) {
+				el.reportValidity();
+			} 
+			else {
+			el.validationMessage = '';
+			}
+		});
+	}
+);
+
 const submitButton = document.querySelectorAll('.checkout__submit');
-submitButton.forEach(function handleNext(el) {
-	el.addEventListener('click', getData);
-	el.addEventListener('click', nextSlide);
+submitButton.forEach(function handleValidation(el) {
+	el.addEventListener('click', validateData);
 });
 
+// Проверяем, все ли инпуты валидные
+function validateData() {
+	let inputs = activeSlide.querySelectorAll('input');
+	let invalidInputs = activeSlide.querySelector('input:invalid');
+	let emptyInputs = activeSlide.querySelector('input').value == "";
+	if (! invalidInputs &&
+		emptyInputs != true) {
+		// Если да, то собираем данные и показываем следующий слайд
+		getData();
+		nextSlide();
+	}
+	else {
+		// Если нет, то еще раз по нажатию выводим нативные сообщения для инпутов
+		inputs.forEach(
+			function validate(el) {
+					el.reportValidity();
+			}
+		);	
+	}
+}
+// Сбор данных (в реальности они сразу отправляются разными способами, а здесь помещаются в объект для демонстрации)
+// Создаем пустой объект 
+let dataObject = {};
 function getData() {
 	// Сбор данных с помощью formData() 
 	let formElement = document.querySelector(".checkout__slide_active");
 	let formData = new FormData(formElement);
-	// Помещаем в объект
-	let dataObject = {};
-	formData.forEach(function(value, key){
-		dataObject[key] = value;
-	});
+	// Помещаем данные в объект
+	formData.forEach((value, key) => dataObject[key] = value);
 	console.log(dataObject);
 }
 
+// Следующий слайд
 function nextSlide() {
 	for (let i = 0; i < allSlides.length; i++) {
 		let all = allSlides[i].classList.contains('checkout__slide_active');
