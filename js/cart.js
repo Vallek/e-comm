@@ -1,4 +1,5 @@
 'use strict';
+// Внимание! Комментарии оставлены в учебных целях. В реальном коде не нужно комментировать каждую строку таким образом.
 // Убавить/прибавить количество по нажатию на кнопки
 // Получаем все инпуты
 const qtyInput = document.querySelectorAll('.qty__number');
@@ -42,7 +43,7 @@ qtyInput.forEach(function handleQty(el) {
 
 });
 
-// Расчет итоговой стоимости
+// Расчет итоговой стоимости (в реальности ее тоже нужно отправить вместе с данными форм)
 const cartItem = document.querySelectorAll('.cart__item');
 const totalNode = document.querySelector('.total__price');
 
