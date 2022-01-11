@@ -1,20 +1,20 @@
-// Show/hide search bar in header
-// Get search bar
+// Скрыть показать поиск в шапке
+// Находим инпут и присваиваем узел переменной
 const searchBar = document.querySelector('.header__search-input');
-// Get search button
+// Находим кнопку
 const searchButton = document.querySelector('.header__search-button');
-// Execute function when user clicks button
+// Выполнить функцию по клику на кнопку
 searchButton.addEventListener('click', handleSearchBar);
-// Function that hides/shows search bar
+// Функция скрытия/показа поиска
 function handleSearchBar() {
 	searchBar.classList.toggle('visually-hidden');
 }
 
-// Show\hide dropdown menu 
+// Показать скрыть выпадающее меню 
 const headerLine = document.querySelector('.header__main');
 const dropdownMenu = document.querySelector('.menu__dropdown');
 
-// Separate event listeners for mouse in and out 
+// Отдельные функции на события наведения и ухода курсора 
 headerLine.addEventListener('mouseenter', ShowDropdownMenu);
 headerLine.addEventListener('mouseleave', HideDropdownMenu);
 
@@ -23,7 +23,7 @@ function ShowDropdownMenu() {
 }
 
 function HideDropdownMenu(el) {
-	// Check if user not hover dropdown menu
+	// Проверить, что курсор не над меню
 	if (el != dropdownMenu) {
 		dropdownMenu.classList.add('visually-hidden');
 	}
