@@ -132,9 +132,6 @@ inputs.forEach(
 		el.addEventListener("input", function() {
 			if (el.checkValidity() == false) {
 				el.reportValidity();
-			} 
-			else {
-			el.setCustomValidity("");
 			}
 		});
 	}
