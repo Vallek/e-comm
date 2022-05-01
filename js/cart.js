@@ -98,7 +98,7 @@ function closePopup() {
 	pageBody.classList.remove('cart-page_dim');
 }
 
-// Предыдущий слайд по кнопке назад (в даном случае переключение слайдов можно сделать и вручную для каждого, но здесь сделано через циклы просто для демонстрации)
+// Предыдущий слайд по кнопке назад (в даном случае переключение слайдов можно сделать и вручную для каждого, но здесь сделано через циклы для демонстрации и универсальности)
 const backButton = document.querySelector('.checkout__back-button');
 const allSlides = document.querySelectorAll('.checkout__slide');
 
