@@ -1137,6 +1137,8 @@ main {
 }
 
 .price-range__input::-moz-range-thumb {
+	-moz-appearance: none;
+	appearance: none;
 	pointer-events: all;
     cursor: pointer;
 	width: 12px;
@@ -1148,6 +1150,7 @@ main {
 
 .price-range__input::-webkit-slider-thumb {
 	-webkit-appearance: none;
+	appearance: none;
 	box-sizing: content-box;
 	pointer-events: all;
     cursor: pointer;
