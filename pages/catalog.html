@@ -12,6 +12,7 @@
 	<link rel="icon" href="../img/e-comm-icon.png" sizes="any" type="image/png">
 	<link rel="icon" href="../img/e-comm-icon.svg" type="image/svg+xml">
 	<script async src="../js/header.js"></script>
+	<script async src="../js/range-slider.js"></script>
 </head>
 <body class="catalog">
 	<header class="header">
@@ -212,15 +213,22 @@
 				<fieldset class="filter__box price-range">
 					<legend class="filter__title">PRICES</legend>
 					<div class="price-range__ranges">
-						<h4 class="price-range__label">Ranger:</h4>
-						<span class="price-range__price price-range__price_min">13.99</span>
-						<span class="price-range__price price-range__price_max">25.99</span>
+						<h4 class="price-range__heading">Ranger:</h4>
+						<label class="price-range__label" for="price_min">
+							<span class="visually-hidden">Минимальная цена</span>
+						</label>
+						<input class="price-range__price price-range__price_min" type="number" name="price_min" id="price_min" min="0" max="" step="0.01" value="13">
+						<label class="price-range__label price-range__label_max" for="price_max">
+							<span class="visually-hidden">Максимальная цена</span>
+						</label>
+						<input class="price-range__price price-range__price_max" type="number" name="price_max" id="price_max" min="0" max="" step="0.01" value="25.99">
 					</div>
 					<div class="price-range__slider">
+						<!-- Максимальные значения в реальности стоит сделать больше, но тогда пропорции внешне не будут соотв. макету -->
+						<input class="price-range__input price-range__input_min" type="range" name="min-price" id="min-price" step="0.01" value="13.99" min="0" max="100">
+						<input class="price-range__input price-range__input_max" type="range" name="max-price" id="max-price" step="0.01" value="25.99" min="0" max="100">
 						<div class="price-range__line">
-							<div class="price-range__handle price-range__handle_min"></div>
 							<div class="price-range__fill"></div>
-							<div class="price-range__handle price-range__handle_max"></div>
 						</div>
 					</div>
 				</fieldset>
