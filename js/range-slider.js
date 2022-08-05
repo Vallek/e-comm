@@ -55,8 +55,11 @@ priceInputs.forEach((el) => {
 
 function adjust(key) {
   let el = key.target;
-  el.style.minWidth = el.value.length + 'ch';
-  el.style.width = el.value.length + 'ch';
+  let value = el.value;
+  if (value > 0) {
+    el.style.minWidth = el.value.length + 'ch';
+    el.style.width = el.value.length + 'ch';
+  }
 }
 
 rangeInputs.forEach((el) => {
