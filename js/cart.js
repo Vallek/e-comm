@@ -45,6 +45,9 @@ qtyInput.forEach(function handleQty(el) {
 
 // Расчет итоговой стоимости (в реальности ее тоже нужно отправить вместе с данными форм)
 const cartItem = document.querySelectorAll('.cart__item');
+const subtotal = document.querySelector('.total__subtotal');
+const shipPrice = document.querySelector('.total__ship').textContent;
+let shipPriceNum = Number(shipPrice);
 const totalNode = document.querySelector('.total__price');
 
 function calcPrice() {
@@ -62,8 +65,10 @@ function calcPrice() {
 	}
 	// Используем метод reduce и функцию с двумя аргументами для сложения всех цен
 	let sum = (previousValue, currentValue) => previousValue + currentValue;
-	let totalPrice = prices.reduce(sum);
+	let subPrice = prices.reduce(sum);
+	let totalPrice = prices.reduce(sum) + shipPriceNum;
 	// Помещаем число в соотв. узел на странице
+	subtotal.textContent = subPrice;
 	totalNode.textContent = totalPrice;
 }
 // Выполняем функцию
