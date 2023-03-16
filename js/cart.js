@@ -110,6 +110,10 @@ const allSlides = document.querySelectorAll('.checkout__slide');
 backButton.addEventListener('click', prevSlide);
 
 function prevSlide() {
+	// Стилизация линий между шагов
+	let steps = document.querySelectorAll('.checkout__step.checkout__step_active');
+	// Для получения последнего активного шага переводим nodelist в массив и применяем метод pop 
+	let step = Array.from(steps).pop();
 	for (let i = 0; i < allSlides.length; i++) {
 		let all = allSlides[i].classList.contains('checkout__slide_active');
 		if (all == true) {
@@ -117,13 +121,14 @@ function prevSlide() {
 			let prev = allSlides[i - 1];
 			if (prev == undefined ||
 				i == 0) {
-				closePopup();
-			}
-			else {
-				active.classList.remove('checkout__slide_active');
-				active.classList.add('visually-hidden');
-				prev.classList.add('checkout__slide_active');
-				prev.classList.remove('visually-hidden');
+					closePopup();
+				}
+				else {
+					active.classList.remove('checkout__slide_active');
+					active.classList.add('visually-hidden');
+					prev.classList.add('checkout__slide_active');
+					prev.classList.remove('visually-hidden');
+					step.classList.remove('checkout__step_active');
 			}
 		}
 	}
@@ -183,6 +188,7 @@ function getData() {
 
 // Следующий слайд
 function nextSlide() {
+	let step = document.querySelector('.checkout__step:not(.checkout__step_active)')
 	for (let i = 0; i < allSlides.length; i++) {
 		let all = allSlides[i].classList.contains('checkout__slide_active');
 		if (all == true) {
@@ -196,6 +202,7 @@ function nextSlide() {
 				active.classList.add('visually-hidden');
 				next.classList.add('checkout__slide_active');
 				next.classList.remove('visually-hidden');
+				step.classList.add('checkout__step_active');
 			}
 		}
 	}

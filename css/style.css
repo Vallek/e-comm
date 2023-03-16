@@ -1750,17 +1750,21 @@ main {
 	background-color: var(--white-red);
 }
 
-.checkout__step:not(:last-of-type)::after {
+.checkout__step:not(:first-of-type)::before {
 	content: '';
 	position: absolute;
-	right: 0;
-	transform: translateX(100%);
+	left: 0;
+	transform: translateX(-100%);
 	width: 25px;
 	height: 2px;
 	background-color: var(--white-red);
 }
 
 .checkout__step_active {
+	background-color: var(--prime-blue);
+}
+
+.checkout__step_active.checkout__step:not(:first-of-type)::before {
 	background-color: var(--prime-blue);
 }
 
