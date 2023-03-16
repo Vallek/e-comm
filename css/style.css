@@ -1483,10 +1483,6 @@ main {
 	font-weight: 400;
 }
 
-.cart-page_dim {
-	overflow: hidden;
-}
-
 .cart-page_dim::before {
 	content: '';
 	position: fixed;
