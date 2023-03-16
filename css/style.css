@@ -1712,6 +1712,12 @@ main {
 	background-size: contain;
 }
 
+@media screen and (max-width: 600px) {
+	.checkout__close-button {
+		margin-right: 2vw;
+	}
+}
+
 .checkout__close-button:hover {
 	border: 2px solid var(--prime-blue);
 }
