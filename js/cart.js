@@ -188,7 +188,7 @@ function getData() {
 
 // Следующий слайд
 function nextSlide() {
-	let step = document.querySelector('.checkout__step:not(.checkout__step_active)')
+	let step = document.querySelector('.checkout__step:not(.checkout__step_active)');
 	for (let i = 0; i < allSlides.length; i++) {
 		let all = allSlides[i].classList.contains('checkout__slide_active');
 		if (all == true) {
