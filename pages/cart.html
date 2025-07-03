@@ -4,6 +4,7 @@
 	<meta charset="utf-8">
 	<title>E-comm - Cart</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preload" href="../fonts/poppins-v15-latin-700.woff2" as="font" type="font/woff2" crossorigin>
 	<link rel="stylesheet" href="../css/normalize.css">
 	<link rel="stylesheet" href="../css/style.css">
 	<link rel="icon" href="../img/e-comm-icon.png" sizes="any" type="image/png">
@@ -15,10 +16,12 @@
 	<header class="header">
 		<div class="header__head">
 			<div class="header__locals locals">
+				<label class="visually-hidden" for="lang">Выбор языка</label>
 				<select class="locals__select" name="lang" id="lang">
 					<option class="locals__value" value="">EN</option>
 					<option class="locals__value" value="">RU</option>
 				</select>
+				<label class="visually-hidden" for="lang">Выбор валюты</label>
 				<select class="locals__select" name="currency" id="currency">
 					<option class="locals__value" value="">USD</option>
 					<option class="locals__value" value="">RUB</option>
@@ -33,8 +36,9 @@
 				<span class="header__items">Items</span>
 				<span class="header__sum">$0.00</span>
 				<form class="header__search-form" method="GET">
-					<input class="header__search-input visually-hidden" type="search" name="search">
-					<button class="header__search-button" type="button"></button>
+					<label class="visually-hidden" for="header-search">Поиск по сайту</label>
+					<input class="header__search-input visually-hidden" id="header-search" type="search" name="search">
+					<button class="header__search-button" type="button" aria-label="Показать поле поиска"></button>
 				</form>
 			</div>
 		</div>
